@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về Chúng Tôi - RetroVibe Thời Trang Secondhand Cao cấp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Reset và biến toàn cục - Tương tự index.html */
+        :root {
+            --primary: #8a6552;
+            --primary-dark: #6d4c3d;
+            --primary-light: #a37e6a;
+            --secondary: #e8d8c5;
+            --accent: #c7a17a;
+            --accent-light: #e1c8ad;
+            --dark: #2c2416;
+            --dark-light: #3d3524;
+            --light: #f9f5f0;
+            --light-gray: #f2eee9;
+            --gray: #8a8a8a;
+            --gray-light: #e0e0e0;
+            --success: #5cb85c;
+            --danger: #d9534f;
+            --warning: #f0ad4e;
+            --info: #5bc0de;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 15px 35px rgba(0, 0, 0, 0.15);
+            --radius: 10px;
+            --radius-lg: 15px;
+            --radius-xl: 20px;
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            --gradient-light: linear-gradient(135deg, var(--light) 0%, var(--secondary) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(199, 161, 122, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(232, 216, 197, 0.05) 0%, transparent 20%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+            color: var(--dark);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        h2.text-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            color: var(--dark-light);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--gradient-accent);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline::before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-outline:hover {
+            color: white;
+            border-color: transparent;
+        }
+
+        .btn-accent {
+            background: var(--gradient-accent);
+        }
+
+        .btn-accent::before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-small {
+            padding: 10px 22px;
+            font-size: 0.9rem;
+        }
+
+        .btn-large {
+            padding: 18px 42px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .bg-light {
+            background-color: var(--light);
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary);
+        }
+
+        .bg-gradient-light {
+            background: var(--gradient-light);
+        }
+
+        /* Floating elements for decoration */
+        .floating-element {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .floating-element.shape-1 {
+            top: 10%;
+            left: 5%;
+            width: 100px;
+            height: 100px;
+            background: var(--accent);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .floating-element.shape-2 {
+            bottom: 15%;
+            right: 7%;
+            width: 150px;
+            height: 150px;
+            background: var(--primary);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(5deg); }
+            66% { transform: translateY(20px) rotate(-5deg); }
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled .header-container {
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo i {
+            margin-right: 12px;
+            color: var(--accent);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .logo:hover i {
+            transform: rotate(-15deg);
+        }
+
+        .logo::after {
+            content: 'VINTAGE';
+            position: absolute;
+            top: -5px;
+            right: -45px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            background-color: var(--light);
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+            padding: 8px 0;
+            font-size: 1.05rem;
+            color: var(--dark);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f8f8f8;
+            border-radius: 50px;
+            padding: 10px 18px;
+            width: 240px;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .search-box:hover,
+        .search-box:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.2);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            padding: 0 12px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            color: var(--primary);
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon, .user-icon, .wishlist-icon {
+            position: relative;
+            font-size: 1.4rem;
+            color: var(--dark);
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .cart-icon:hover, .user-icon:hover, .wishlist-icon:hover {
+            background-color: #f8f8f8;
+            color: var(--primary);
+        }
+
+        .cart-count, .wishlist-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--gradient-accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle:hover {
+            background-color: #f8f8f8;
+        }
+
+        /* Hero Section cho About Page */
+        .about-hero {
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1558769132-cb1cb458edb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 180px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(199, 161, 122, 0.1) 0%, rgba(138, 101, 82, 0.05) 100%);
+            z-index: 0;
+        }
+
+        .about-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-hero h1 {
+            font-size: 4.2rem;
+            margin-bottom: 1.8rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #fff 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Mission & Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 3rem;
+        }
+
+        .mission-card, .vision-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 50px 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .mission-card::before, .vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--gradient-accent);
+        }
+
+        .mission-icon, .vision-icon {
+            font-size: 3.5rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+        }
+
+        /* Values Section */
+        .values {
+            background-color: var(--secondary);
+            position: relative;
+        }
+
+        .values::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23c7a17a' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        /* Timeline - Our Journey */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-accent);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 30px;
+            background-color: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            left: -10px;
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.4rem;
+            box-shadow: var(--shadow);
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-year {
+            right: -40px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -40px;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .team-img {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .team-card:hover .team-img img {
+            transform: scale(1.1);
+        }
+
+        .team-info {
+            padding: 30px;
+        }
+
+        .team-name {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .team-role {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .team-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .team-social a:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+            z-index: 0;
+        }
+
+        .process-step {
+            width: 22%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.8rem;
+            margin: 0 auto 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .process-step:hover .step-number {
+            transform: scale(1.1) rotate(15deg);
+            background: var(--gradient-accent);
+        }
+
+        .step-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .process-step:hover .step-content {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section h2 {
+            color: white;
+        }
+
+        .cta-section h2::after {
+            background: var(--accent);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 90px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-bottom: 15px;
+            color: white;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a i {
+            font-size: 0.9rem;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 8px;
+        }
+
+        .footer-links a:hover i {
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--accent);
+            margin-top: 5px;
+            font-size: 1.1rem;
+            min-width: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+        }
+
+        .payment-methods i {
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .payment-methods i:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .about-hero {
+                padding: 150px 0 100px;
+            }
+            
+            .about-hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .process-step {
+                width: 48%;
+                margin-bottom: 50px;
+            }
+            
+            .process-steps::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .section {
+                padding: 80px 0;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 100px);
+                margin-left: 100px;
+            }
+            
+            .timeline-content::after {
+                left: -10px !important;
+                right: auto !important;
+            }
+            
+            .timeline-year {
+                left: 0 !important;
+                right: auto !important;
+            }
+            
+            .team-grid, .values-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: var(--shadow-xl);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+                gap: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 15px 0;
+                width: 100%;
+                border-bottom: 1px solid var(--gray-light);
+            }
+            
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-links a::before {
+                display: none;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .header-actions .search-box {
+                display: none;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .process-step {
+                width: 100%;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .about-hero {
+                padding: 130px 0 80px;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .btn {
+                padding: 12px 28px;
+            }
+            
+            .btn-large {
+                padding: 16px 36px;
+            }
+            
+            .team-grid, .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .slide-left {
+            animation: slideLeft 0.8s ease forwards;
+        }
+
+        @keyframes slideLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .slide-right {
+            animation: slideRight 0.8s ease forwards;
+        }
+
+        @keyframes slideRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .zoom-in {
+            animation: zoomIn 0.8s ease forwards;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+
+        /* Staggered animation for grid items */
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .stagger-item.animate {
+            animation: staggerItem 0.6s ease forwards;
+        }
+
+        @keyframes staggerItem {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i> RetroVibe
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html" class="active">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-icons">
+                    <div class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">5</span>
+                    </div>
+                    
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="floating-element shape-1"></div>
+        <div class="floating-element shape-2"></div>
+        
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="animate__animated animate__fadeInDown">Câu Chuyện RetroVibe</h1>
+                <p class="animate__animated animate__fadeIn animate__delay-1s">Từ đam mê thời trang vintage đến sứ mệnh tái định nghĩa thời trang bền vững. Chúng tôi mang đến những câu chuyện được kể qua từng món đồ secondhand.</p>
+                <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#our-story" class="btn btn-accent btn-large">
+                        <i class="fas fa-book-open"></i> Khám phá câu chuyện
+                    </a>
+                    <a href="#team" class="btn btn-outline btn-large">
+                        <i class="fas fa-users"></i> Gặp gỡ đội ngũ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section bg-light" id="our-story">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Hành Trình Của Chúng Tôi</h2>
+                <p class="slide-up delay-1">Từ một cửa hàng nhỏ đến thương hiệu thời trang secondhand hàng đầu Việt Nam</p>
+            </div>
+            
+            <div class="story-content">
+                <div class="story-text slide-left">
+                    <h3 class="text-primary">Từ ý tưởng đến hiện thực</h3>
+                    <p>RetroVibe được thành lập năm 2018 bởi một nhóm bạn trẻ đam mê thời trang và quan tâm đến môi trường. Chúng tôi nhận thấy rằng ngành công nghiệp thời trang là một trong những ngành gây ô nhiễm nhất thế giới, trong khi vẫn còn rất nhiều trang phục chất lượng cao bị bỏ quên trong tủ đồ.</p>
+                    <p>Với sứ mệnh mang đến một giải pháp thời trang bền vững, chúng tôi bắt đầu với một cửa hàng nhỏ tại trung tâm TP.HCM, nơi chúng tôi tuyển chọn kỹ lưỡng từng món đồ secondhand và tái tạo chúng với một diện mạo mới.</p>
+                    <p>Ngày nay, RetroVibe không chỉ là một cửa hàng thời trang mà còn là cộng đồng của những người yêu thích phong cách độc đáo và quan tâm đến tác động môi trường của thời trang.</p>
+                </div>
+                
+                <div class="story-image slide-right">
+                    <div class="image-frame" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-xl);">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cửa hàng đầu tiên của RetroVibe">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission & Vision -->
+            <div class="mission-vision" style="margin-top: 80px;">
+                <div class="mission-card slide-up">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Sứ Mệnh</h3>
+                    <p>Chúng tôi cam kết tái định nghĩa thời trang bền vững bằng cách mang đến những sản phẩm secondhand chất lượng cao, độc đáo và có câu chuyện. Mỗi món đồ tại RetroVibe không chỉ là trang phục mà còn là một phần của lịch sử thời trang và cam kết với môi trường.</p>
+                </div>
+                
+                <div class="vision-card slide-up delay-1">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Tầm Nhìn</h3>
+                    <p>Đến năm 2030, RetroVibe hướng đến trở thành thương hiệu dẫn đầu về thời trang bền vững tại Đông Nam Á, xây dựng một cộng đồng 1 triệu người tiêu dùng có ý thức về môi trường và lan tỏa thông điệp về thời trang có trách nhiệm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="section values">
+        <div class="floating-element shape-1"></div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Giá Trị Cốt Lõi</h2>
+                <p class="slide-up delay-1">Những nguyên tắc định hướng mọi hoạt động của RetroVibe</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card stagger-item">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Bền Vững</h3>
+                    <p>Mỗi sản phẩm của chúng tôi đều góp phần giảm thiểu chất thải dệt may và bảo vệ môi trường. Chúng tôi tin rằng thời trang đẹp không cần phải hủy hoại hành tinh.</p>
+                </div>
+                
+                <div class="value-card stagger-item">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Chất Lượng</h3>
+                    <p>Từ khâu tuyển chọn, kiểm định đến bảo quản, mỗi món đồ đều trải qua quy trình nghiêm ngặt để đảm bảo chất lượng tốt nhất cho khách hàng.</p>
+                </div>
+                
+                <div class="value-card stagger-item">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Độc Đáo</h3>
+                    <p>Mỗi sản phẩm tại RetroVibe đều mang một câu chuyện riêng, một phong cách riêng. Chúng tôi tôn vinh sự khác biệt và khuyến khích cá nhân hóa phong cách.</p>
+                </div>
+                
+                <div class="value-card stagger-item">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Minh Bạch</h3>
+                    <p>Chúng tôi cam kết minh bạch về nguồn gốc, tình trạng và giá trị của từng sản phẩm. Mọi thông tin đều được cung cấp đầy đủ và chính xác.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Timeline -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Hành Trình Phát Triển</h2>
+                <p class="slide-up delay-1">Những cột mốc quan trọng trên chặng đường của RetroVibe</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content slide-right">
+                        <h3>Khởi đầu khiêm tốn</h3>
+                        <p>RetroVibe chính thức ra mắt với cửa hàng đầu tiên tại Quận 1, TP.HCM. Chúng tôi bắt đầu với 200 sản phẩm được tuyển chọn từ các nguồn uy tín và nhanh chóng nhận được sự ủng hộ từ cộng đồng yêu thích vintage.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content slide-left">
+                        <h3>Mở rộng trực tuyến</h3>
+                        <p>Website chính thức của RetroVibe được ra mắt, mở ra cánh cửa tiếp cận khách hàng trên toàn quốc. Chúng tôi cũng bắt đầu hợp tác với các nghệ sĩ và nhà thiết kế để tái tạo lại các sản phẩm vintage.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content slide-right">
+                        <h3>Chuỗi cửa hàng đầu tiên</h3>
+                        <p>Mở rộng thêm 2 cửa hàng tại Hà Nội và Đà Nẵng. RetroVibe chính thức trở thành chuỗi cửa hàng thời trang secondhand đầu tiên tại Việt Nam với quy mô toàn quốc.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-content slide-left">
+                        <h3>Hợp tác quốc tế</h3>
+                        <p>RetroVibe thiết lập quan hệ đối tác với các nhà cung cấp vintage từ Nhật Bản, Hàn Quốc và châu Âu, mang đến cho khách hàng Việt Nam những món đồ độc đáo từ khắp nơi trên thế giới.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content slide-right">
+                        <h3>Trở thành thương hiệu dẫn đầu</h3>
+                        <p>Với hơn 10.000 khách hàng thân thiết và hơn 50.000 sản phẩm đã được bán, RetroVibe chính thức trở thành thương hiệu thời trang secondhand hàng đầu tại Việt Nam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="section bg-secondary">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Quy Trình Tuyển Chọn</h2>
+                <p class="slide-up delay-1">Mỗi sản phẩm tại RetroVibe đều trải qua quy trình kiểm định nghiêm ngặt 5 bước</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step stagger-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Thu Mua & Tuyển Chọn</h3>
+                        <p>Chúng tôi thu mua từ các nguồn uy tín: tủ đồ cá nhân, cửa hàng vintage nước ngoài, và các đối tác chuyên về đồ secondhand. Chỉ 20% số đồ thu về được chọn để bán tại RetroVibe.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step stagger-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Kiểm Định Chất Lượng</h3>
+                        <p>Mỗi sản phẩm được kiểm tra kỹ lưỡng về chất liệu, độ bền, tình trạng và độ an toàn. Chúng tôi phân loại thành 4 cấp độ: Như mới, Rất tốt, Tốt, và Cần sửa chữa.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step stagger-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Làm Sạch & Bảo Quản</h3>
+                        <p>Tất cả sản phẩm đều được làm sạch chuyên nghiệp bằng phương pháp thân thiện với môi trường. Đồ da được dưỡng ẩm, kim loại được đánh bóng, vải được xử lý vết bẩn đặc biệt.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step stagger-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Chụp Ảnh & Mô Tả</h3>
+                        <p>Mỗi sản phẩm được chụp ảnh từ nhiều góc độ dưới ánh sáng tự nhiên. Chúng tôi cung cấp mô tả chi tiết về kích thước, tình trạng, chất liệu và lịch sử của sản phẩm.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step stagger-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Đóng Gói & Vận Chuyển</h3>
+                        <p>Sản phẩm được đóng gói bằng vật liệu tái chế và gửi đến tay khách hàng cùng với hướng dẫn bảo quản. Chúng tôi cam kết đóng gói an toàn và thân thiện với môi trường.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section class="section" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Gặp Gỡ Đội Ngũ</h2>
+                <p class="slide-up delay-1">Những người đam mê đứng sau sự thành công của RetroVibe</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card stagger-item">
+                    <div class="team-img">
+                        <img src="https://i.pinimg.com/originals/5a/9b/e7/5a9be7d082bb14522f078b492c29ee4b.jpg" alt="Trịnh Hồng Liên">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Trịnh Hồng Liên</h3>
+                        <div class="team-role">Nhà sáng lập & CEO</div>
+                        <p>Với hơn 10 năm kinh nghiệm trong ngành thời trang và đam mê bất tận với vintage, Liên là người đặt nền móng cho RetroVibe.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card stagger-item">
+                    <div class="team-img">
+                        <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/hinh-anh-avatar-sadboiz.jpg" alt="Nguyễn Phúc Đức">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Nguyễn Phúc Đức</h3>
+                        <div class="team-role">Giám đốc Sản phẩm</div>
+                        <p>Chuyên gia trong việc đánh giá và tuyển chọn sản phẩm, Đức đảm bảo mỗi món đồ tại RetroVibe đều đạt tiêu chuẩn chất lượng cao nhất.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card stagger-item">
+                    <div class="team-img">
+                        <img src="https://demoda.vn/wp-content/uploads/2022/04/anh-hoat-hinh-buon-nam.jpg" alt="Phan Tuấn Minh">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Phan Tuấn Minh</h3>
+                        <div class="team-role">Trưởng phòng Thiết kế</div>
+                        <p>Với con mắt thẩm mỹ tinh tế, Minh là người tái tạo và phục chế những món đồ vintage, biến chúng thành các tác phẩm thời trang độc đáo.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card stagger-item">
+                    <div class="team-img">
+                        <img src="https://demoda.vn/wp-content/uploads/2022/04/anh-hoat-hinh-buon-600x600.jpg" alt="Huy và Khánh">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Huy và Khánh</h3>
+                        <div class="team-role">Giám đốc Bền vững</div>
+                        <p>Huy và Khánh chịu trách nhiệm đảm bảo mọi hoạt động của RetroVibe đều tuân thủ nguyên tắc bền vững và thân thiện với môi trường.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 60px;">
+                <p class="slide-up">Cùng với hơn 50 nhân viên đầy nhiệt huyết khác, chúng tôi cam kết mang đến trải nghiệm mua sắm tốt nhất cho cộng đồng yêu thích thời trang bền vững.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Tham Gia Hành Trình Của Chúng Tôi</h2>
+                <p>Bạn có thể trở thành một phần của RetroVibe bằng nhiều cách khác nhau: mua sắm thông minh, bán lại quần áo cũ, hoặc đơn giản là lan tỏa thông điệp về thời trang bền vững.</p>
+            </div>
+            
+            <div class="cta-buttons slide-up">
+                <a href="products.html" class="btn btn-accent btn-large">
+                    <i class="fas fa-shopping-bag"></i> Mua sắm bền vững
+                </a>
+                <a href="contact.html" class="btn btn-outline btn-large" style="border-color: white; color: white;">
+                    <i class="fas fa-handshake"></i> Hợp tác với chúng tôi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RetroVibe</h3>
+                    <p>Thương hiệu thời trang secondhand cao cấp, mang đến những món đồ độc đáo với câu chuyện riêng và giá trị bền vững.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Sản phẩm</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> Về chúng tôi</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Liên hệ</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Chính sách</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Chính sách bảo mật</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Điều khoản sử dụng</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Chính sách đổi trả</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Chính sách vận chuyển</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Bảo vệ môi trường</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên hệ</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li><i class="fas fa-phone"></i> (028) 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@retrovibe.vn</li>
+                        <li><i class="fas fa-clock"></i> Mở cửa: 9:00 - 21:00 hàng ngày</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 RetroVibe. Tất cả các quyền được bảo lưu. | Thiết kế bởi RetroVibe Team</p>
+                </div>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fas fa-money-bill-wave" title="COD"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Mobile Navigation Toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-bars');
+                this.querySelector('i').classList.toggle('fa-times');
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.add('fa-bars');
+                    mobileToggle.querySelector('i').classList.remove('fa-times');
+                });
+            });
+            
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Initialize stagger animations
+            function initStaggerAnimations() {
+                const staggerItems = document.querySelectorAll('.stagger-item');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.classList.add('animate');
+                            }, index * 150);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+                
+                staggerItems.forEach(item => {
+                    observer.observe(item);
+                });
+            }
+            
+            initStaggerAnimations();
+            
+            // Add animation classes on scroll
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.slide-up, .slide-left, .slide-right, .zoom-in');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.classList.add('animate');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', animateOnScroll);
+            // Initial check
+            animateOnScroll();
+            
+            // Parallax effect for hero section
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.about-hero');
+                if (hero) {
+                    hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+                }
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-box input');
+            const searchButton = document.querySelector('.search-box button');
+            
+            searchButton.addEventListener('click', function() {
+                performSearch();
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            function performSearch() {
+                const query = searchInput.value.trim();
+                if (query) {
+                    alert(`Đang tìm kiếm: "${query}"\n\nTrong ứng dụng thực tế, bạn sẽ được chuyển hướng đến trang kết quả tìm kiếm.`);
+                    // For demo, we'll just log it
+                    console.log(`Searching for: ${query}`);
+                } else {
+                    alert("Vui lòng nhập từ khóa tìm kiếm!");
+                }
+            }
+            
+            // Cart and Wishlist functionality (simple version)
+            document.querySelectorAll('.cart-icon, .wishlist-icon, .user-icon').forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    if (this.classList.contains('cart-icon')) {
+                        alert("Giỏ hàng của bạn đang có 3 sản phẩm. Nhấn OK để xem chi tiết.");
+                        window.location.href = "cart.html";
+                    } else if (this.classList.contains('wishlist-icon')) {
+                        alert("Danh sách yêu thích của bạn đang có 5 sản phẩm.");
+                    } else if (this.classList.contains('user-icon')) {
+                        alert("Trang tài khoản cá nhân. Trong ứng dụng thực tế, bạn sẽ được chuyển hướng đến trang đăng nhập/tài khoản.");
+                    }
+                });
+            });
+            
+            // Add ripple effect to buttons
+            document.querySelectorAll('.btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.7);
+                        transform: scale(0);
+                        animation: ripple-animation 0.6s linear;
+                        width: ${size}px;
+                        height: ${size}px;
+                        top: ${y}px;
+                        left: ${x}px;
+                    `;
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+            
+            // Add CSS for ripple animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes ripple-animation {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Timeline responsive adjustments
+            function adjustTimeline() {
+                const timeline = document.querySelector('.timeline');
+                const timelineItems = document.querySelectorAll('.timeline-item');
+                
+                if (window.innerWidth <= 992) {
+                    // Already adjusted by CSS
+                } else {
+                    // Ensure original layout for larger screens
+                    timelineItems.forEach((item, index) => {
+                        if (index % 2 === 0) {
+                            item.style.flexDirection = 'row';
+                        } else {
+                            item.style.flexDirection = 'row-reverse';
+                        }
+                    });
+                }
+            }
+            
+            window.addEventListener('resize', adjustTimeline);
+            adjustTimeline(); // Initial call
+        });
+    </script>
+</body>
+</html>

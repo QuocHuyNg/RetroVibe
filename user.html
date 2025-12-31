@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroVibe - Tài khoản của tôi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Reset và biến toàn cục - Giữ nguyên từ index.html */
+        :root {
+            --primary: #8a6552;
+            --primary-dark: #6d4c3d;
+            --primary-light: #a37e6a;
+            --secondary: #e8d8c5;
+            --accent: #c7a17a;
+            --accent-light: #e1c8ad;
+            --dark: #2c2416;
+            --dark-light: #3d3524;
+            --light: #f9f5f0;
+            --light-gray: #f2eee9;
+            --gray: #8a8a8a;
+            --gray-light: #e0e0e0;
+            --success: #5cb85c;
+            --danger: #d9534f;
+            --warning: #f0ad4e;
+            --info: #5bc0de;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 15px 35px rgba(0, 0, 0, 0.15);
+            --radius: 10px;
+            --radius-lg: 15px;
+            --radius-xl: 20px;
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            --gradient-light: linear-gradient(135deg, var(--light) 0%, var(--secondary) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(199, 161, 122, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(232, 216, 197, 0.05) 0%, transparent 20%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+            color: var(--dark);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        h2.text-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            color: var(--dark-light);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--gradient-accent);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline::before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-outline:hover {
+            color: white;
+            border-color: transparent;
+        }
+
+        .btn-accent {
+            background: var(--gradient-accent);
+        }
+
+        .btn-accent::before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-small {
+            padding: 10px 22px;
+            font-size: 0.9rem;
+        }
+
+        .btn-large {
+            padding: 18px 42px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .btn-icon {
+            padding: 12px;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .bg-light {
+            background-color: var(--light);
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary);
+        }
+
+        .bg-gradient-light {
+            background: var(--gradient-light);
+        }
+
+        /* Header & Navigation - Giữ nguyên từ index.html */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled .header-container {
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo i {
+            margin-right: 12px;
+            color: var(--accent);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .logo:hover i {
+            transform: rotate(-15deg);
+        }
+
+        .logo::after {
+            content: 'VINTAGE';
+            position: absolute;
+            top: -5px;
+            right: -45px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            background-color: var(--light);
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+            padding: 8px 0;
+            font-size: 1.05rem;
+            color: var(--dark);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f8f8f8;
+            border-radius: 50px;
+            padding: 10px 18px;
+            width: 240px;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .search-box:hover,
+        .search-box:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.2);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            padding: 0 12px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            color: var(--primary);
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon, .user-icon, .wishlist-icon {
+            position: relative;
+            font-size: 1.4rem;
+            color: var(--dark);
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .cart-icon:hover, .user-icon:hover, .wishlist-icon:hover {
+            background-color: #f8f8f8;
+            color: var(--primary);
+        }
+
+        .cart-count, .wishlist-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--gradient-accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle:hover {
+            background-color: #f8f8f8;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 40px 0 20px;
+            background-color: var(--light);
+        }
+
+        .breadcrumb-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        .breadcrumb-content a {
+            color: var(--gray);
+        }
+
+        .breadcrumb-content a:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb-content i {
+            font-size: 0.8rem;
+        }
+
+        /* User Dashboard */
+        .user-dashboard {
+            padding: 60px 0 100px;
+            min-height: 70vh;
+        }
+
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+        }
+
+        .user-sidebar {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .user-profile {
+            text-align: center;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .user-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 4px solid var(--secondary);
+            box-shadow: var(--shadow);
+        }
+
+        .user-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .user-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .user-email {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .user-status {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .user-status.active {
+            background-color: rgba(92, 184, 92, 0.2);
+            color: var(--success);
+        }
+
+        .user-menu {
+            margin-top: 20px;
+        }
+
+        .user-menu-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 15px;
+            margin-bottom: 8px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            color: var(--dark-light);
+        }
+
+        .user-menu-item:hover {
+            background-color: var(--light-gray);
+            color: var(--primary);
+            padding-left: 20px;
+        }
+
+        .user-menu-item.active {
+            background: var(--gradient-light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .user-menu-item i {
+            width: 24px;
+            font-size: 1.2rem;
+        }
+
+        .user-content {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 40px;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .content-header h2 {
+            margin-bottom: 0;
+        }
+
+        .content-header h2::after {
+            display: none;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Profile Form */
+        .profile-form {
+            max-width: 700px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: white;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.2);
+        }
+
+        .form-text {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* Orders */
+        .orders-list {
+            margin-top: 30px;
+        }
+
+        .order-card {
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .order-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--light-gray);
+        }
+
+        .order-id {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .order-date {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .order-status {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .order-status.pending {
+            background-color: rgba(240, 173, 78, 0.2);
+            color: var(--warning);
+        }
+
+        .order-status.processing {
+            background-color: rgba(91, 192, 222, 0.2);
+            color: var(--info);
+        }
+
+        .order-status.completed {
+            background-color: rgba(92, 184, 92, 0.2);
+            color: var(--success);
+        }
+
+        .order-status.cancelled {
+            background-color: rgba(217, 83, 79, 0.2);
+            color: var(--danger);
+        }
+
+        .order-items {
+            padding: 20px;
+        }
+
+        .order-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-item-img {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .order-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .order-item-info {
+            flex: 1;
+        }
+
+        .order-item-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .order-item-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .order-item-price {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .order-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .order-total {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .order-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Addresses */
+        .addresses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .address-card {
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            padding: 25px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .address-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .address-card.default {
+            border-color: var(--accent);
+            border-width: 2px;
+        }
+
+        .address-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .address-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+
+        .address-default-badge {
+            background-color: var(--accent);
+            color: white;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+
+        .address-details {
+            margin-bottom: 20px;
+            color: var(--dark-light);
+            line-height: 1.6;
+        }
+
+        .address-phone {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .address-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .add-address-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--gray-light);
+            border-radius: var(--radius);
+            padding: 40px 25px;
+            transition: var(--transition);
+            cursor: pointer;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        .add-address-card:hover {
+            border-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .add-address-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Wishlist */
+        .wishlist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .wishlist-item {
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .wishlist-item:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .wishlist-item-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .wishlist-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .wishlist-item:hover .wishlist-item-img img {
+            transform: scale(1.05);
+        }
+
+        .wishlist-item-remove {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: white;
+            border: none;
+            box-shadow: var(--shadow);
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .wishlist-item-remove:hover {
+            background-color: var(--danger);
+            color: white;
+        }
+
+        .wishlist-item-info {
+            padding: 20px;
+        }
+
+        .wishlist-item-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .wishlist-item-name:hover {
+            color: var(--primary);
+        }
+
+        .wishlist-item-price {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .wishlist-item-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Footer - Giữ nguyên từ index.html */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 90px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-bottom: 15px;
+            color: white;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a i {
+            font-size: 0.9rem;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 8px;
+        }
+
+        .footer-links a:hover i {
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--accent);
+            margin-top: 5px;
+            font-size: 1.1rem;
+            min-width: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+        }
+
+        .payment-methods i {
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .payment-methods i:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .dashboard-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .user-sidebar {
+                position: static;
+                top: auto;
+            }
+            
+            .addresses-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .section {
+                padding: 80px 0;
+            }
+            
+            .nav-links {
+                gap: 25px;
+            }
+            
+            .search-box {
+                width: 200px;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .addresses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: var(--shadow-xl);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+                gap: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 15px 0;
+                width: 100%;
+                border-bottom: 1px solid var(--gray-light);
+            }
+            
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-links a::before {
+                display: none;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .header-actions .search-box {
+                display: none;
+            }
+            
+            .user-content {
+                padding: 30px 20px;
+            }
+            
+            .content-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .order-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .order-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .order-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .wishlist-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .user-dashboard {
+                padding: 40px 0 70px;
+            }
+            
+            .order-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .order-item-img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .wishlist-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .slide-left {
+            animation: slideLeft 0.8s ease forwards;
+        }
+
+        @keyframes slideLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .slide-right {
+            animation: slideRight 0.8s ease forwards;
+        }
+
+        @keyframes slideRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .zoom-in {
+            animation: zoomIn 0.8s ease forwards;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i> RetroVibe
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-icons">
+                    <a href="user.html" class="user-icon active">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    
+                    <div class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">5</span>
+                    </div>
+                    
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <a href="index.html">Trang chủ</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Tài khoản của tôi</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Dashboard -->
+    <section class="user-dashboard">
+        <div class="container">
+            <div class="dashboard-container">
+                <!-- Sidebar -->
+                <div class="user-sidebar slide-left">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Nguyễn Thị Minh Anh">
+                        </div>
+                        <h3 class="user-name">Nguyễn Thị Minh Anh</h3>
+                        <p class="user-email">minhanh.nguyen@example.com</p>
+                        <div class="user-status active">Thành viên từ 2021</div>
+                    </div>
+                    
+                    <div class="user-menu">
+                        <div class="user-menu-item active" data-tab="profile">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Thông tin tài khoản</span>
+                        </div>
+                        <div class="user-menu-item" data-tab="orders">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Đơn hàng của tôi</span>
+                        </div>
+                        <div class="user-menu-item" data-tab="addresses">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Địa chỉ giao hàng</span>
+                        </div>
+                        <div class="user-menu-item" data-tab="wishlist">
+                            <i class="fas fa-heart"></i>
+                            <span>Danh sách yêu thích</span>
+                            <span class="wishlist-count">5</span>
+                        </div>
+                        <div class="user-menu-item" data-tab="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Cài đặt tài khoản</span>
+                        </div>
+                        <div class="user-menu-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Đăng xuất</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="user-content slide-right">
+                    <!-- Profile Tab -->
+                    <div class="tab-content active" id="profile">
+                        <div class="content-header">
+                            <h2>Thông tin tài khoản</h2>
+                            <button class="btn btn-small">Lưu thay đổi</button>
+                        </div>
+                        
+                        <form class="profile-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label" for="firstName">Họ và tên đệm</label>
+                                    <input type="text" id="firstName" class="form-control" value="Nguyễn Thị">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="lastName">Tên</label>
+                                    <input type="text" id="lastName" class="form-control" value="Minh Anh">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input type="email" id="email" class="form-control" value="minhanh.nguyen@example.com">
+                                    <div class="form-text">Email này cũng là tên đăng nhập của bạn</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">Số điện thoại</label>
+                                    <input type="tel" id="phone" class="form-control" value="0987654321">
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label class="form-label" for="birthday">Ngày sinh</label>
+                                    <input type="date" id="birthday" class="form-control" value="1990-05-15">
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label class="form-label">Giới tính</label>
+                                    <div style="display: flex; gap: 20px; margin-top: 10px;">
+                                        <label style="display: flex; align-items: center; gap: 8px;">
+                                            <input type="radio" name="gender" checked>
+                                            <span>Nữ</span>
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 8px;">
+                                            <input type="radio" name="gender">
+                                            <span>Nam</span>
+                                        </label>
+                                        <label style="display: flex; align-items: center; gap: 8px;">
+                                            <input type="radio" name="gender">
+                                            <span>Khác</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h3 style="margin-top: 40px; margin-bottom: 20px;">Đổi mật khẩu</h3>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label" for="currentPassword">Mật khẩu hiện tại</label>
+                                    <input type="password" id="currentPassword" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="newPassword">Mật khẩu mới</label>
+                                    <input type="password" id="newPassword" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="confirmPassword">Xác nhận mật khẩu</label>
+                                    <input type="password" id="confirmPassword" class="form-control">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Orders Tab -->
+                    <div class="tab-content" id="orders">
+                        <div class="content-header">
+                            <h2>Đơn hàng của tôi</h2>
+                            <div style="display: flex; gap: 15px;">
+                                <select class="form-control" style="width: auto;">
+                                    <option>Tất cả đơn hàng</option>
+                                    <option>Chờ xác nhận</option>
+                                    <option>Đang xử lý</option>
+                                    <option>Đang giao hàng</option>
+                                    <option>Đã giao</option>
+                                    <option>Đã hủy</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="orders-list">
+                            <!-- Order 1 -->
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <div class="order-id">Đơn hàng #RV20230615001</div>
+                                        <div class="order-date">Đặt ngày: 15/06/2023</div>
+                                    </div>
+                                    <div class="order-status completed">Đã giao</div>
+                                </div>
+                                
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <div class="order-item-img">
+                                            <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lrytb1v8zjd08d" alt="Áo khoác denim vintage">
+                                        </div>
+                                        <div class="order-item-info">
+                                            <div class="order-item-name">Áo khoác Denim Vintage 90s</div>
+                                            <div class="order-item-meta">
+                                                <span>Size: M</span>
+                                                <span>Số lượng: 1</span>
+                                                <span class="order-item-price">450.000đ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="order-item">
+                                        <div class="order-item-img">
+                                            <img src="https://4men.com.vn/images/thumbs/2024/12/ao-len-tay-dai-det-hoa-tiet-qua-tram-form-regular-al012-mau-den-18749-slide-products-6758028ee4319.jpg" alt="Áo len vintage">
+                                        </div>
+                                        <div class="order-item-info">
+                                            <div class="order-item-name">Áo Len Vintage Họa Tiết</div>
+                                            <div class="order-item-meta">
+                                                <span>Size: M</span>
+                                                <span>Số lượng: 1</span>
+                                                <span class="order-item-price">540.000đ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-footer">
+                                    <div class="order-total">Tổng tiền: 990.000đ</div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-small">Xem chi tiết</button>
+                                        <button class="btn btn-small">Mua lại</button>
+                                        <button class="btn btn-outline btn-small">Đánh giá</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Order 2 -->
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <div class="order-id">Đơn hàng #RV20230528002</div>
+                                        <div class="order-date">Đặt ngày: 28/05/2023</div>
+                                    </div>
+                                    <div class="order-status processing">Đang giao hàng</div>
+                                </div>
+                                
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <div class="order-item-img">
+                                            <img src="https://cf.shopee.vn/file/1bed928f53eb3d6fce94cff9d99de5b3" alt="Đầm hoa vintage">
+                                        </div>
+                                        <div class="order-item-info">
+                                            <div class="order-item-name">Đầm Hoa Vintage Thập niên 70</div>
+                                            <div class="order-item-meta">
+                                                <span>Size: S</span>
+                                                <span>Số lượng: 1</span>
+                                                <span class="order-item-price">620.000đ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-footer">
+                                    <div class="order-total">Tổng tiền: 620.000đ</div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-small">Xem chi tiết</button>
+                                        <button class="btn btn-outline btn-small">Theo dõi đơn hàng</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Order 3 -->
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div>
+                                        <div class="order-id">Đơn hàng #RV20230412003</div>
+                                        <div class="order-date">Đặt ngày: 12/04/2023</div>
+                                    </div>
+                                    <div class="order-status cancelled">Đã hủy</div>
+                                </div>
+                                
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <div class="order-item-img">
+                                            <img src="https://n7media.coolmate.me/image/April2025/phong-cach-vintage-la-gi-8.jpg" alt="Set đồ vintage">
+                                        </div>
+                                        <div class="order-item-info">
+                                            <div class="order-item-name">Set Đồ Vintage 2 Món</div>
+                                            <div class="order-item-meta">
+                                                <span>Size: S</span>
+                                                <span>Số lượng: 1</span>
+                                                <span class="order-item-price">890.000đ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="order-footer">
+                                    <div class="order-total">Tổng tiền: 890.000đ</div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline btn-small">Xem chi tiết</button>
+                                        <button class="btn btn-small">Mua lại</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Addresses Tab -->
+                    <div class="tab-content" id="addresses">
+                        <div class="content-header">
+                            <h2>Địa chỉ giao hàng</h2>
+                            <button class="btn btn-small" id="addAddressBtn">Thêm địa chỉ mới</button>
+                        </div>
+                        
+                        <div class="addresses-grid">
+                            <!-- Address 1 -->
+                            <div class="address-card default">
+                                <div class="address-header">
+                                    <div class="address-name">Nhà riêng</div>
+                                    <div class="address-default-badge">Mặc định</div>
+                                </div>
+                                <div class="address-details">
+                                    <p>Nguyễn Thị Minh Anh</p>
+                                    <p>Số 123, Đường ABC, Phường XYZ, Quận 1</p>
+                                    <p>Thành phố Hồ Chí Minh, Việt Nam</p>
+                                    <p class="address-phone">Điện thoại: 0987654321</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-outline btn-small">Chỉnh sửa</button>
+                                    <button class="btn btn-small">Đặt mặc định</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Address 2 -->
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <div class="address-name">Công ty</div>
+                                </div>
+                                <div class="address-details">
+                                    <p>Nguyễn Thị Minh Anh</p>
+                                    <p>Tầng 5, Tòa nhà DEF, Số 456, Đường GHI</p>
+                                    <p>Phường KLM, Quận 3, Thành phố Hồ Chí Minh</p>
+                                    <p class="address-phone">Điện thoại: 0987654321</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-outline btn-small">Chỉnh sửa</button>
+                                    <button class="btn btn-small">Đặt mặc định</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Add New Address -->
+                            <div class="add-address-card" id="addNewAddress">
+                                <i class="fas fa-plus-circle"></i>
+                                <h4>Thêm địa chỉ mới</h4>
+                                <p>Thêm địa chỉ giao hàng mới</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wishlist Tab -->
+                    <div class="tab-content" id="wishlist">
+                        <div class="content-header">
+                            <h2>Danh sách yêu thích</h2>
+                            <div>
+                                <span style="margin-right: 15px; color: var(--gray);">5 sản phẩm</span>
+                                <button class="btn btn-small">Thêm tất cả vào giỏ hàng</button>
+                            </div>
+                        </div>
+                        
+                        <div class="wishlist-grid">
+                            <!-- Wishlist Item 1 -->
+                            <div class="wishlist-item">
+                                <button class="wishlist-item-remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <div class="wishlist-item-img">
+                                    <img src="https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/01/ao-khoac-da-nam-levi-s-vintage-deer-faux-leather-sherpa-lined-aviator-bomber-vintage-brown-mau-nau-den-61f4bc636c48e-29012022110243.jpg" alt="Áo khoác da vintage">
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <a href="product.html?id=7" class="wishlist-item-name">Áo Khoác Da Vintage</a>
+                                    <div class="wishlist-item-price">1.250.000đ</div>
+                                    <div class="wishlist-item-actions">
+                                        <button class="btn btn-small" style="flex: 1;">Thêm vào giỏ hàng</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Wishlist Item 2 -->
+                            <div class="wishlist-item">
+                                <button class="wishlist-item-remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <div class="wishlist-item-img">
+                                    <img src="https://js0fpsb45jobj.vcdn.cloud/storage/upload/media/dam-vintage/phong-cach-thoi-trang-vay-dam-vintage-la-gi.jpg" alt="Đầm dạ hội vintage">
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <a href="product.html?id=11" class="wishlist-item-name">Đầm Dạ Hội Vintage</a>
+                                    <div class="wishlist-item-price">1.150.000đ</div>
+                                    <div class="wishlist-item-actions">
+                                        <button class="btn btn-small" style="flex: 1;">Thêm vào giỏ hàng</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Wishlist Item 3 -->
+                            <div class="wishlist-item">
+                                <button class="wishlist-item-remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <div class="wishlist-item-img">
+                                    <img src="https://i.pinimg.com/originals/69/a1/e8/69a1e8c3fefe90abe82cb16cba2705ca.jpg" alt="Quần jeans vintage">
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <a href="product.html?id=9" class="wishlist-item-name">Quần Jeans Vintage 90s</a>
+                                    <div class="wishlist-item-price">420.000đ</div>
+                                    <div class="wishlist-item-actions">
+                                        <button class="btn btn-small" style="flex: 1;">Thêm vào giỏ hàng</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Wishlist Item 4 -->
+                            <div class="wishlist-item">
+                                <button class="wishlist-item-remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <div class="wishlist-item-img">
+                                    <img src="https://sakurafashion.vn/upload/sanpham/large/27020-ao-len-co-lo-nu-hoa-tiet-van-thung-phong-cach-retro-1.jpg" alt="Áo len vintage">
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <a href="product.html?id=10" class="wishlist-item-name">Áo Len Vintage Họa Tiết</a>
+                                    <div class="wishlist-item-price">540.000đ</div>
+                                    <div class="wishlist-item-actions">
+                                        <button class="btn btn-small" style="flex: 1;">Thêm vào giỏ hàng</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Wishlist Item 5 -->
+                            <div class="wishlist-item">
+                                <button class="wishlist-item-remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                                <div class="wishlist-item-img">
+                                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lrytb1v8zjd08d" alt="Áo khoác denim vintage">
+                                </div>
+                                <div class="wishlist-item-info">
+                                    <a href="product.html?id=1" class="wishlist-item-name">Áo khoác Denim Vintage 90s</a>
+                                    <div class="wishlist-item-price">450.000đ</div>
+                                    <div class="wishlist-item-actions">
+                                        <button class="btn btn-small" style="flex: 1;">Thêm vào giỏ hàng</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Settings Tab -->
+                    <div class="tab-content" id="settings">
+                        <div class="content-header">
+                            <h2>Cài đặt tài khoản</h2>
+                            <button class="btn btn-small">Lưu cài đặt</button>
+                        </div>
+                        
+                        <div class="profile-form">
+                            <div class="form-group">
+                                <label class="form-label">Ngôn ngữ ưa thích</label>
+                                <select class="form-control">
+                                    <option selected>Tiếng Việt</option>
+                                    <option>English</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Đơn vị tiền tệ</label>
+                                <select class="form-control">
+                                    <option selected>Việt Nam Đồng (₫)</option>
+                                    <option>US Dollar ($)</option>
+                                </select>
+                            </div>
+                            
+                            <h3 style="margin-top: 40px; margin-bottom: 20px;">Tùy chọn thông báo</h3>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 20px;">
+                                <label style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span>Thông báo qua email về đơn hàng mới</span>
+                                    <input type="checkbox" checked style="transform: scale(1.2);">
+                                </label>
+                                
+                                <label style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span>Thông báo về sản phẩm giảm giá</span>
+                                    <input type="checkbox" checked style="transform: scale(1.2);">
+                                </label>
+                                
+                                <label style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span>Thông báo về sản phẩm mới</span>
+                                    <input type="checkbox" checked style="transform: scale(1.2);">
+                                </label>
+                                
+                                <label style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span>Nhận bản tin qua email</span>
+                                    <input type="checkbox" style="transform: scale(1.2);">
+                                </label>
+                            </div>
+                            
+                            <h3 style="margin-top: 40px; margin-bottom: 20px;">Bảo mật tài khoản</h3>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Xác thực hai yếu tố (2FA)</label>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-outline btn-small">Thiết lập 2FA</button>
+                                    <div class="form-text">Tăng cường bảo mật cho tài khoản của bạn bằng xác thực hai yếu tố</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Hoạt động đăng nhập</label>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-outline btn-small">Xem lịch sử đăng nhập</button>
+                                    <div class="form-text">Xem tất cả các thiết bị đã đăng nhập vào tài khoản của bạn</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Xóa tài khoản</label>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-outline btn-small" style="background-color: rgba(217, 83, 79, 0.1); color: var(--danger); border-color: var(--danger);">Xóa tài khoản</button>
+                                    <div class="form-text">Hành động này không thể hoàn tác. Tất cả dữ liệu của bạn sẽ bị xóa vĩnh viễn.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RetroVibe</h3>
+                    <p>Thương hiệu thời trang secondhand cao cấp, mang đến những món đồ độc đáo với câu chuyện riêng và giá trị bền vững.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Sản phẩm</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> Về chúng tôi</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Liên hệ</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Danh mục</h3>
+                    <ul class="footer-links">
+                        <li><a href="products.html?category=jackets"><i class="fas fa-chevron-right"></i> Áo khoác Vintage</a></li>
+                        <li><a href="products.html?category=dresses"><i class="fas fa-chevron-right"></i> Đầm Vintage</a></li>
+                        <li><a href="products.html?category=tshirts"><i class="fas fa-chevron-right"></i> Áo thun Cổ điển</a></li>
+                        <li><a href="products.html?category=accessories"><i class="fas fa-chevron-right"></i> Phụ kiện Vintage</a></li>
+                        <li><a href="products.html?category=shirts"><i class="fas fa-chevron-right"></i> Áo sơ mi Retro</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên hệ</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li><i class="fas fa-phone"></i> (028) 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@retrovibe.vn</li>
+                        <li><i class="fas fa-clock"></i> Mở cửa: 9:00 - 21:00 hàng ngày</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 RetroVibe. Tất cả các quyền được bảo lưu. | Thiết kế bởi RetroVibe Team</p>
+                </div>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fas fa-money-bill-wave" title="COD"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Mobile Navigation Toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-bars');
+                this.querySelector('i').classList.toggle('fa-times');
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.add('fa-bars');
+                    mobileToggle.querySelector('i').classList.remove('fa-times');
+                });
+            });
+            
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Tab switching functionality
+            const menuItems = document.querySelectorAll('.user-menu-item');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Skip logout button
+                    if (!this.dataset.tab) return;
+                    
+                    // Remove active class from all menu items and tab contents
+                    menuItems.forEach(item => item.classList.remove('active'));
+                    tabContents.forEach(tab => tab.classList.remove('active'));
+                    
+                    // Add active class to clicked menu item
+                    this.classList.add('active');
+                    
+                    // Show corresponding tab content
+                    const tabId = this.dataset.tab;
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Add address functionality
+            const addAddressBtn = document.getElementById('addAddressBtn');
+            const addNewAddress = document.getElementById('addNewAddress');
+            
+            function showAddAddressForm() {
+                // In a real app, this would show a modal with a form
+                alert('Tính năng thêm địa chỉ mới sẽ hiển thị form nhập thông tin tại đây. Trong ứng dụng thực tế, bạn sẽ thấy một modal với form nhập thông tin địa chỉ.');
+            }
+            
+            addAddressBtn.addEventListener('click', showAddAddressForm);
+            addNewAddress.addEventListener('click', showAddAddressForm);
+            
+            // Remove from wishlist functionality
+            const removeButtons = document.querySelectorAll('.wishlist-item-remove');
+            const wishlistCount = document.querySelector('.wishlist-count');
+            
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const wishlistItem = this.closest('.wishlist-item');
+                    wishlistItem.style.opacity = '0';
+                    wishlistItem.style.transform = 'scale(0.9)';
+                    
+                    setTimeout(() => {
+                        wishlistItem.remove();
+                        
+                        // Update wishlist count
+                        const currentCount = parseInt(wishlistCount.textContent);
+                        wishlistCount.textContent = currentCount - 1;
+                        
+                        // Update wishlist count in sidebar
+                        document.querySelector('.user-menu-item[data-tab="wishlist"] .wishlist-count').textContent = currentCount - 1;
+                        
+                        // Show message if wishlist is empty
+                        const wishlistGrid = document.querySelector('.wishlist-grid');
+                        if (wishlistGrid.children.length === 0) {
+                            wishlistGrid.innerHTML = `
+                                <div class="empty-wishlist" style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+                                    <i class="fas fa-heart" style="font-size: 4rem; color: var(--gray-light); margin-bottom: 20px;"></i>
+                                    <h3>Danh sách yêu thích trống</h3>
+                                    <p>Bạn chưa có sản phẩm nào trong danh sách yêu thích. Hãy thêm sản phẩm bạn yêu thích vào đây!</p>
+                                    <a href="products.html" class="btn" style="margin-top: 20px;">
+                                        <i class="fas fa-shopping-bag"></i> Khám phá sản phẩm
+                                    </a>
+                                </div>
+                            `;
+                        }
+                    }, 300);
+                });
+            });
+            
+            // Add to cart from wishlist
+            const addToCartButtons = document.querySelectorAll('.wishlist-item-actions .btn');
+            const cartCount = document.querySelector('.cart-count');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // In a real app, this would add the product to cart
+                    const currentCount = parseInt(cartCount.textContent);
+                    cartCount.textContent = currentCount + 1;
+                    
+                    // Show success message
+                    alert('Sản phẩm đã được thêm vào giỏ hàng!');
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-box input');
+            const searchButton = document.querySelector('.search-box button');
+            
+            searchButton.addEventListener('click', function() {
+                performSearch();
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            function performSearch() {
+                const query = searchInput.value.trim();
+                if (query) {
+                    // In a real app, you would redirect to search results page
+                    alert(`Tìm kiếm: "${query}" - Trong ứng dụng thực tế, bạn sẽ được chuyển đến trang kết quả tìm kiếm.`);
+                    console.log(`Searching for: ${query}`);
+                } else {
+                    alert("Vui lòng nhập từ khóa tìm kiếm!");
+                }
+            }
+            
+            // Logout functionality
+            const logoutButton = document.querySelector('.user-menu-item:last-child');
+            logoutButton.addEventListener('click', function() {
+                if (confirm('Bạn có chắc chắn muốn đăng xuất khỏi tài khoản?')) {
+                    // In a real app, this would clear session and redirect
+                    alert('Đăng xuất thành công! Trong ứng dụng thực tế, bạn sẽ được chuyển về trang chủ.');
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
