@@ -1,0 +1,2576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ Trợ Khách Hàng - RetroVibe Thời trang Secondhand Cao cấp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Reset và biến toàn cục - Giữ nguyên từ index.html */
+        :root {
+            --primary: #8a6552;
+            --primary-dark: #6d4c3d;
+            --primary-light: #a37e6a;
+            --secondary: #e8d8c5;
+            --accent: #c7a17a;
+            --accent-light: #e1c8ad;
+            --dark: #2c2416;
+            --dark-light: #3d3524;
+            --light: #f9f5f0;
+            --light-gray: #f2eee9;
+            --gray: #8a8a8a;
+            --gray-light: #e0e0e0;
+            --success: #5cb85c;
+            --danger: #d9534f;
+            --warning: #f0ad4e;
+            --info: #5bc0de;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 15px 35px rgba(0, 0, 0, 0.15);
+            --radius: 10px;
+            --radius-lg: 15px;
+            --radius-xl: 20px;
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            --gradient-light: linear-gradient(135deg, var(--light) 0%, var(--secondary) 100%);
+            --ai-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(199, 161, 122, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(232, 216, 197, 0.05) 0%, transparent 20%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+            color: var(--dark);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        h2.text-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            color: var(--dark-light);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--gradient-accent);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline::before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-outline:hover {
+            color: white;
+            border-color: transparent;
+        }
+
+        .btn-accent {
+            background: var(--gradient-accent);
+        }
+
+        .btn-accent::before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-small {
+            padding: 10px 22px;
+            font-size: 0.9rem;
+        }
+
+        .btn-large {
+            padding: 18px 42px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .btn-icon {
+            padding: 12px;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .bg-light {
+            background-color: var(--light);
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary);
+        }
+
+        .bg-gradient-light {
+            background: var(--gradient-light);
+        }
+
+        /* Floating elements for decoration */
+        .floating-element {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .floating-element.shape-1 {
+            top: 10%;
+            left: 5%;
+            width: 100px;
+            height: 100px;
+            background: var(--accent);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .floating-element.shape-2 {
+            bottom: 15%;
+            right: 7%;
+            width: 150px;
+            height: 150px;
+            background: var(--primary);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(5deg); }
+            66% { transform: translateY(20px) rotate(-5deg); }
+        }
+
+        /* Header & Navigation - Giữ nguyên từ index.html */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled .header-container {
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo i {
+            margin-right: 12px;
+            color: var(--accent);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .logo:hover i {
+            transform: rotate(-15deg);
+        }
+
+        .logo::after {
+            content: 'VINTAGE';
+            position: absolute;
+            top: -5px;
+            right: -45px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            background-color: var(--light);
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+            padding: 8px 0;
+            font-size: 1.05rem;
+            color: var(--dark);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f8f8f8;
+            border-radius: 50px;
+            padding: 10px 18px;
+            width: 240px;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .search-box:hover,
+        .search-box:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.2);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            padding: 0 12px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            color: var(--primary);
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon, .user-icon, .wishlist-icon, .support-icon {
+            position: relative;
+            font-size: 1.4rem;
+            color: var(--dark);
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .cart-icon:hover, .user-icon:hover, .wishlist-icon:hover, .support-icon:hover {
+            background-color: #f8f8f8;
+            color: var(--primary);
+        }
+
+        .cart-count, .wishlist-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--gradient-accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle:hover {
+            background-color: #f8f8f8;
+        }
+
+        /* Support Hero Section */
+        .support-hero {
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(199, 161, 122, 0.1) 0%, rgba(138, 101, 82, 0.05) 100%);
+            z-index: 0;
+        }
+
+        .support-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .support-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.8rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #fff 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .support-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Support Navigation */
+        .support-nav {
+            background-color: var(--light);
+            padding: 30px 0;
+            border-bottom: 1px solid var(--gray-light);
+            position: sticky;
+            top: 80px;
+            z-index: 900;
+        }
+
+        .support-nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .support-nav a {
+            font-weight: 600;
+            color: var(--dark);
+            padding: 10px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .support-nav a i {
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+        .support-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transition: var(--transition);
+        }
+
+        .support-nav a:hover::after,
+        .support-nav a.active::after {
+            width: 100%;
+        }
+
+        .support-nav a:hover,
+        .support-nav a.active {
+            color: var(--primary);
+        }
+
+        /* Support Categories */
+        .support-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 3rem;
+        }
+
+        .support-category {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-category:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .support-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+
+        .support-category h3 {
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .support-category p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--light);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            color: var(--dark-light);
+            line-height: 1.8;
+        }
+
+        .faq-answer.active {
+            padding: 0 30px 30px;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* AI Chatbot Section */
+        .ai-chatbot-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-chatbot-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23667eea' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .ai-chatbot {
+            background-color: white;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            min-height: 500px;
+        }
+
+        .ai-sidebar {
+            background: var(--ai-bg);
+            color: white;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .ai-header {
+            text-align: center;
+        }
+
+        .ai-header h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .ai-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #764ba2;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .ai-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .quick-questions {
+            margin-top: 30px;
+        }
+
+        .quick-questions h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .quick-question {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 12px 18px;
+            border-radius: var(--radius);
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .quick-question:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateX(5px);
+        }
+
+        .ai-chat-area {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--gray-light);
+            margin-bottom: 20px;
+        }
+
+        .chat-header h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+            margin-bottom: 20px;
+            max-height: 300px;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message.ai {
+            align-items: flex-start;
+        }
+
+        .message.user {
+            align-items: flex-end;
+        }
+
+        .message-content {
+            padding: 15px 20px;
+            border-radius: var(--radius-lg);
+            max-width: 80%;
+            position: relative;
+        }
+
+        .message.ai .message-content {
+            background-color: var(--secondary);
+            color: var(--dark);
+            border-top-left-radius: 5px;
+        }
+
+        .message.user .message-content {
+            background: var(--gradient-primary);
+            color: white;
+            border-top-right-radius: 5px;
+        }
+
+        .message-time {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .chat-input input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.2);
+        }
+
+        .chat-input button {
+            background: var(--ai-bg);
+            color: white;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .chat-input button:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Contact Options */
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 3rem;
+        }
+
+        .contact-option {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-option:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .contact-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .contact-option h3 {
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .contact-option p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        /* Support Resources */
+        .support-resources {
+            background-color: var(--light);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 3rem;
+        }
+
+        .resource-card {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .resource-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .resource-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .resource-card:hover .resource-img img {
+            transform: scale(1.05);
+        }
+
+        .resource-content {
+            padding: 30px;
+        }
+
+        .resource-content h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .resource-content p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        /* Footer - Giữ nguyên từ index.html */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 90px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-bottom: 15px;
+            color: white;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a i {
+            font-size: 0.9rem;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 8px;
+        }
+
+        .footer-links a:hover i {
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--accent);
+            margin-top: 5px;
+            font-size: 1.1rem;
+            min-width: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+        }
+
+        .payment-methods i {
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .payment-methods i:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-5px);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 18px 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transform: translateX(150%);
+            transition: transform 0.5s ease;
+            z-index: 3000;
+            max-width: 350px;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-icon {
+            font-size: 1.5rem;
+        }
+
+        .toast-content h4 {
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .toast-content p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 5000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .loading-spinner.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 70px;
+            height: 70px;
+            border: 5px solid var(--secondary);
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .support-hero {
+                padding: 130px 0 90px;
+            }
+            
+            .support-hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .section {
+                padding: 80px 0;
+            }
+            
+            .nav-links {
+                gap: 25px;
+            }
+            
+            .search-box {
+                width: 200px;
+            }
+            
+            .support-nav ul {
+                gap: 25px;
+            }
+            
+            .ai-chatbot {
+                grid-template-columns: 1fr;
+            }
+            
+            .ai-sidebar {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: var(--shadow-xl);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+                gap: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 15px 0;
+                width: 100%;
+                border-bottom: 1px solid var(--gray-light);
+            }
+            
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-links a::before {
+                display: none;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .header-actions .search-box {
+                display: none;
+            }
+            
+            .support-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .support-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .support-nav {
+                top: 0;
+                position: relative;
+                padding: 25px 0;
+            }
+            
+            .support-nav ul {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .support-categories, .contact-options, .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ai-chatbot {
+                min-height: 600px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .support-hero {
+                padding: 120px 0 80px;
+            }
+            
+            .support-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .btn {
+                padding: 12px 28px;
+            }
+            
+            .btn-large {
+                padding: 16px 36px;
+            }
+            
+            .faq-question {
+                padding: 20px;
+                font-size: 1.1rem;
+            }
+            
+            .faq-answer {
+                padding: 0 20px;
+            }
+            
+            .faq-answer.active {
+                padding: 0 20px 20px;
+            }
+            
+            .chat-input {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .chat-input button {
+                width: 100%;
+                border-radius: var(--radius);
+                height: 50px;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .slide-left {
+            animation: slideLeft 0.8s ease forwards;
+        }
+
+        @keyframes slideLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .slide-right {
+            animation: slideRight 0.8s ease forwards;
+        }
+
+        @keyframes slideRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .zoom-in {
+            animation: zoomIn 0.8s ease forwards;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Đang tải trang...</p>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i> RetroVibe
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="support.html" class="active">Hỗ trợ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-icons">
+                    <a href="user.html" class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    
+                    <a href="wishlist.html" class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">5</span>
+                    </a>
+                    
+                    <a href="support.html" class="support-icon" title="Hỗ trợ khách hàng">
+                        <i class="fas fa-headset"></i>
+                    </a>
+                    
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Support Hero Section -->
+    <section class="support-hero">
+        <div class="floating-element shape-1"></div>
+        <div class="floating-element shape-2"></div>
+        
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="animate__animated animate__fadeInDown">Trung Tâm Hỗ Trợ Khách Hàng</h1>
+                <p class="animate__animated animate__fadeIn animate__delay-1s">Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7. Tìm kiếm câu trả lời, hướng dẫn chi tiết hoặc trò chuyện với AI tư vấn của chúng tôi để được hỗ trợ ngay lập tức.</p>
+                <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#ai-chatbot" class="btn btn-accent btn-large">
+                        <i class="fas fa-robot"></i> Trò chuyện với AI
+                    </a>
+                    <a href="#faq" class="btn btn-outline btn-large">
+                        <i class="fas fa-question-circle"></i> Câu hỏi thường gặp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Navigation -->
+    <section class="support-nav" id="supportNav">
+        <div class="container">
+            <ul>
+                <li><a href="#faq" class="active"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="#ai-chatbot"><i class="fas fa-robot"></i> AI Tư vấn</a></li>
+                <li><a href="#contact-options"><i class="fas fa-phone-alt"></i> Liên hệ</a></li>
+                <li><a href="#resources"><i class="fas fa-book"></i> Tài nguyên</a></li>
+                <li><a href="#guides"><i class="fas fa-clipboard-list"></i> Hướng dẫn</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Support Categories -->
+    <section class="section" id="guides">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Chúng Tôi Có Thể Giúp Gì Cho Bạn?</h2>
+                <p class="slide-up delay-1">Chọn chủ đề bạn cần hỗ trợ hoặc sử dụng AI tư vấn để được hướng dẫn nhanh chóng.</p>
+            </div>
+            
+            <div class="support-categories">
+                <div class="support-category slide-left">
+                    <div class="category-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Đặt Hàng & Thanh Toán</h3>
+                    <p>Hướng dẫn đặt hàng, phương thức thanh toán, mã giảm giá và xử lý đơn hàng.</p>
+                    <a href="#faq-ordering" class="btn btn-small">Xem hướng dẫn</a>
+                </div>
+                
+                <div class="support-category slide-up delay-1">
+                    <div class="category-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Vận Chuyển & Giao Hàng</h3>
+                    <p>Theo dõi đơn hàng, thời gian giao hàng, phí vận chuyển và khu vực giao hàng.</p>
+                    <a href="#faq-shipping" class="btn btn-small">Xem hướng dẫn</a>
+                </div>
+                
+                <div class="support-category slide-right delay-2">
+                    <div class="category-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Đổi Trả & Hoàn Tiền</h3>
+                    <p>Chính sách đổi trả, điều kiện hoàn tiền, quy trình và thời gian xử lý.</p>
+                    <a href="#faq-returns" class="btn btn-small">Xem hướng dẫn</a>
+                </div>
+                
+                <div class="support-category slide-left delay-3">
+                    <div class="category-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Tài Khoản & Bảo Mật</h3>
+                    <p>Quản lý tài khoản, đổi mật khẩu, bảo mật thông tin và quyền riêng tư.</p>
+                    <a href="#faq-account" class="btn btn-small">Xem hướng dẫn</a>
+                </div>
+                
+                <div class="support-category slide-up delay-4">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Sản Phẩm & Kích Cỡ</h3>
+                    <p>Hướng dẫn chọn size, chất liệu sản phẩm, bảo quản và chăm sóc.</p>
+                    <a href="#faq-products" class="btn btn-small">Xem hướng dẫn</a>
+                </div>
+                
+                <div class="support-category slide-right delay-1">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Chương Trình Thành Viên</h3>
+                    <p>Quyền lợi thành viên, tích điểm, ưu đãi đặc biệt và hạng thẻ.</p>
+                    <a href="#faq-membership" class="btn btn-small">Xem hướng dẫn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section bg-light" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Câu Hỏi Thường Gặp (FAQ)</h2>
+                <p class="slide-up delay-1">Tìm câu trả lời nhanh cho những thắc mắc phổ biến nhất của khách hàng.</p>
+            </div>
+            
+            <div class="faq-container">
+                <!-- FAQ Category: Ordering -->
+                <h3 class="text-center slide-up" id="faq-ordering" style="margin-top: 50px;">Đặt Hàng & Thanh Toán</h3>
+                
+                <div class="faq-item slide-up">
+                    <div class="faq-question">
+                        <span>Làm thế nào để đặt hàng trên RetroVibe?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Để đặt hàng trên RetroVibe, bạn có thể làm theo các bước sau:</p>
+                        <ol style="margin-left: 20px; margin-bottom: 15px;">
+                            <li>Chọn sản phẩm bạn muốn mua</li>
+                            <li>Chọn kích cỡ và số lượng (nếu có)</li>
+                            <li>Nhấn "Thêm vào giỏ hàng"</li>
+                            <li>Đi đến trang giỏ hàng và nhấn "Thanh toán"</li>
+                            <li>Điền thông tin giao hàng và chọn phương thức thanh toán</li>
+                            <li>Xác nhận đơn hàng và thanh toán</li>
+                        </ol>
+                        <p>Bạn sẽ nhận được email xác nhận đơn hàng ngay sau khi đặt hàng thành công.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item slide-up delay-1">
+                    <div class="faq-question">
+                        <span>RetroVibe có những phương thức thanh toán nào?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>RetroVibe chấp nhận các phương thức thanh toán sau:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><strong>Thanh toán khi nhận hàng (COD)</strong>: Thanh toán bằng tiền mặt khi nhận hàng</li>
+                            <li><strong>Chuyển khoản ngân hàng</strong>: Chuyển khoản qua tài khoản ngân hàng của RetroVibe</li>
+                            <li><strong>Thẻ tín dụng/ghi nợ</strong>: Visa, Mastercard, JCB</li>
+                            <li><strong>Ví điện tử</strong>: Momo, ZaloPay, VNPay</li>
+                            <li><strong>Internet Banking</strong>: Thanh toán trực tuyến qua ngân hàng</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item slide-up delay-2">
+                    <div class="faq-question">
+                        <span>Làm thế nào để sử dụng mã giảm giá?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Để sử dụng mã giảm giá, bạn làm theo các bước sau:</p>
+                        <ol style="margin-left: 20px; margin-bottom: 15px;">
+                            <li>Thêm sản phẩm vào giỏ hàng</li>
+                            <li>Đi đến trang giỏ hàng</li>
+                            <li>Tìm ô "Mã giảm giá" hoặc "Mã khuyến mãi"</li>
+                            <li>Nhập mã và nhấn "Áp dụng"</li>
+                            <li>Kiểm tra xem mã đã được áp dụng thành công chưa</li>
+                        </ol>
+                        <p>Lưu ý: Mỗi mã giảm giá có điều kiện áp dụng riêng (ví dụ: đơn hàng tối thiểu, áp dụng cho sản phẩm nhất định, thời hạn sử dụng).</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Category: Shipping -->
+                <h3 class="text-center slide-up" id="faq-shipping" style="margin-top: 50px;">Vận Chuyển & Giao Hàng</h3>
+                
+                <div class="faq-item slide-up">
+                    <div class="faq-question">
+                        <span>Thời gian giao hàng là bao lâu?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Thời gian giao hàng phụ thuộc vào địa chỉ giao hàng của bạn:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><strong>TP.HCM</strong>: 1-2 ngày làm việc</li>
+                            <li><strong>Các tỉnh thành khác</strong>: 3-5 ngày làm việc</li>
+                            <li><strong>Vùng sâu vùng xa</strong>: 5-7 ngày làm việc</li>
+                            <li><strong>Đơn hàng quốc tế</strong>: 7-14 ngày làm việc (tùy quốc gia)</li>
+                        </ul>
+                        <p>Thời gian trên có thể thay đổi trong các dịp lễ, Tết hoặc do ảnh hưởng của thời tiết. Bạn có thể theo dõi đơn hàng trong tài khoản của mình.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item slide-up delay-1">
+                    <div class="faq-question">
+                        <span>Làm thế nào để theo dõi đơn hàng?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Có 3 cách để theo dõi đơn hàng của bạn:</p>
+                        <ol style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><strong>Qua tài khoản RetroVibe</strong>: Đăng nhập vào tài khoản, vào mục "Đơn hàng của tôi" để xem trạng thái đơn hàng</li>
+                            <li><strong>Qua email</strong>: Chúng tôi sẽ gửi email cập nhật trạng thái đơn hàng cho bạn</li>
+                            <li><strong>Qua tổng đài</strong>: Gọi đến hotline (028) 1234 5678 và cung cấp mã đơn hàng để được hỗ trợ</li>
+                        </ol>
+                        <p>Mỗi đơn hàng đều có mã vận đơn riêng, bạn có thể sử dụng mã này để tra cứu trên website của đơn vị vận chuyển.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Category: Returns -->
+                <h3 class="text-center slide-up" id="faq-returns" style="margin-top: 50px;">Đổi Trả & Hoàn Tiền</h3>
+                
+                <div class="faq-item slide-up">
+                    <div class="faq-question">
+                        <span>Chính sách đổi trả của RetroVibe như thế nào?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>RetroVibe áp dụng chính sách đổi trả linh hoạt trong vòng 7 ngày kể từ ngày nhận hàng:</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><strong>Điều kiện đổi trả</strong>: Sản phẩm còn nguyên tem mác, chưa qua sử dụng, không có mùi lạ, giữ nguyên tình trạng ban đầu</li>
+                            <li><strong>Sản phẩm không được đổi trả</strong>: Đồ lót, đồ bơi, phụ kiện đã sử dụng, sản phẩm khuyến mãi không cho phép đổi trả</li>
+                            <li><strong>Chi phí đổi trả</strong>: Khách hàng chịu phí vận chuyển đổi trả (trừ trường hợp sản phẩm lỗi từ nhà cung cấp)</li>
+                            <li><strong>Thời gian xử lý</strong>: 3-5 ngày làm việc sau khi nhận được sản phẩm đổi trả</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item slide-up delay-1">
+                    <div class="faq-question">
+                        <span>Làm thế nào để yêu cầu đổi trả/huỷ đơn hàng?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Để yêu cầu đổi trả hoặc huỷ đơn hàng, bạn có thể:</p>
+                        <ol style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><strong>Qua website</strong>: Đăng nhập tài khoản, vào mục "Đơn hàng của tôi", chọn đơn hàng cần đổi trả và làm theo hướng dẫn</li>
+                            <li><strong>Qua email</strong>: Gửi email đến support@retrovibe.vn với tiêu đề "[Đổi trả] Mã đơn hàng" và nội dung chi tiết</li>
+                            <li><strong>Qua tổng đài</strong>: Gọi hotline (028) 1234 5678 trong giờ hành chính</li>
+                            <li><strong>Qua AI tư vấn</strong>: Sử dụng chatbot trên website để được hướng dẫn tự động</li>
+                        </ol>
+                        <p>Vui lòng chuẩn bị sẵn mã đơn hàng và lý do đổi trả để được hỗ trợ nhanh chóng.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 60px;">
+                <a href="#ai-chatbot" class="btn btn-large slide-up">
+                    <i class="fas fa-robot"></i> Hỏi thêm với AI Tư vấn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot Section -->
+    <section class="section ai-chatbot-section" id="ai-chatbot">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">AI Tư Vấn Thông Minh</h2>
+                <p class="slide-up delay-1">Trò chuyện với AI tư vấn của RetroVibe để được hỗ trợ ngay lập tức, 24/7.</p>
+            </div>
+            
+            <div class="ai-chatbot slide-up">
+                <!-- AI Sidebar -->
+                <div class="ai-sidebar">
+                    <div class="ai-header">
+                        <div class="ai-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>RetroBot</h3>
+                        <p>AI Tư vấn RetroVibe</p>
+                        <div class="ai-status">
+                            <div class="status-dot"></div>
+                            <span>Đang trực tuyến</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-questions">
+                        <h4>Câu hỏi nhanh</h4>
+                        <button class="quick-question" data-question="Làm thế nào để đặt hàng?">
+                            <i class="fas fa-shopping-cart"></i> Làm thế nào để đặt hàng?
+                        </button>
+                        <button class="quick-question" data-question="Thời gian giao hàng là bao lâu?">
+                            <i class="fas fa-truck"></i> Thời gian giao hàng là bao lâu?
+                        </button>
+                        <button class="quick-question" data-question="Chính sách đổi trả như thế nào?">
+                            <i class="fas fa-exchange-alt"></i> Chính sách đổi trả như thế nào?
+                        </button>
+                        <button class="quick-question" data-question="Làm thế nào để theo dõi đơn hàng?">
+                            <i class="fas fa-map-marker-alt"></i> Làm thế nào để theo dõi đơn hàng?
+                        </button>
+                    </div>
+                    
+                    <div class="ai-info">
+                        <p style="font-size: 0.9rem; opacity: 0.9;">
+                            <i class="fas fa-info-circle"></i> RetroBot có thể hỗ trợ bạn về đặt hàng, vận chuyển, đổi trả và các câu hỏi thường gặp khác.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- AI Chat Area -->
+                <div class="ai-chat-area">
+                    <div class="chat-header">
+                        <h3>Trò chuyện với RetroBot</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem;">Tôi có thể giúp gì cho bạn hôm nay?</p>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Messages will be added here by JavaScript -->
+                        <div class="message ai">
+                            <div class="message-content">
+                                Xin chào! Tôi là RetroBot, AI tư vấn của RetroVibe. Tôi có thể giúp gì cho bạn hôm nay? Bạn có thể hỏi tôi về đặt hàng, vận chuyển, đổi trả hoặc bất kỳ thắc mắc nào khác về RetroVibe.
+                            </div>
+                            <div class="message-time">Hôm nay, 10:00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Nhập câu hỏi của bạn...">
+                        <button id="sendMessage">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="section" id="contact-options">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Các Kênh Liên Hệ Hỗ Trợ</h2>
+                <p class="slide-up delay-1">Liên hệ với chúng tôi qua nhiều kênh khác nhau để được hỗ trợ nhanh nhất.</p>
+            </div>
+            
+            <div class="contact-options">
+                <div class="contact-option slide-left">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Gọi điện thoại</h3>
+                    <p>Liên hệ trực tiếp với đội ngũ hỗ trợ khách hàng của chúng tôi.</p>
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">(028) 1234 5678</p>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Thứ 2 - Chủ nhật: 8:00 - 22:00</p>
+                    </div>
+                    <a href="tel:+842812345678" class="btn btn-small">
+                        <i class="fas fa-phone"></i> Gọi ngay
+                    </a>
+                </div>
+                
+                <div class="contact-option slide-up delay-1">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Gửi email</h3>
+                    <p>Gửi câu hỏi chi tiết và nhận phản hồi trong vòng 24 giờ.</p>
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">support@retrovibe.vn</p>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Phản hồi trong 24h</p>
+                    </div>
+                    <a href="mailto:support@retrovibe.vn" class="btn btn-small">
+                        <i class="fas fa-envelope"></i> Gửi email
+                    </a>
+                </div>
+                
+                <div class="contact-option slide-right delay-2">
+                    <div class="contact-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Chat trực tuyến</h3>
+                    <p>Trò chuyện trực tiếp với nhân viên hỗ trợ của chúng tôi.</p>
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">Live Chat</p>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Thứ 2 - Thứ 6: 9:00 - 21:00</p>
+                    </div>
+                    <button class="btn btn-small" id="startLiveChat">
+                        <i class="fas fa-comments"></i> Bắt đầu chat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Resources -->
+    <section class="section support-resources bg-light" id="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-center slide-up">Tài Nguyên Hỗ Trợ</h2>
+                <p class="slide-up delay-1">Khám phá các tài nguyên hữu ích để hiểu rõ hơn về dịch vụ của RetroVibe.</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card slide-left">
+                    <div class="resource-img">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Hướng dẫn mua hàng">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Hướng Dẫn Mua Hàng Chi Tiết</h3>
+                        <p>Tìm hiểu từng bước đặt hàng, thanh toán và nhận hàng tại RetroVibe. Bao gồm video hướng dẫn trực quan.</p>
+                        <a href="#" class="btn btn-small">
+                            <i class="fas fa-download"></i> Tải hướng dẫn
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card slide-up delay-1">
+                    <div class="resource-img">
+                        <img src="https://blog.photoadking.com/wp-content/uploads/2023/05/4.-Standard-Brochure-Sizes-B-1-1024x576.jpg" alt="Hướng dẫn chọn size">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Hướng Dẫn Chọn Size</h3>
+                        <p>Bảng size chi tiết cho từng loại sản phẩm, hướng dẫn đo đạc và lựa chọn size phù hợp nhất với bạn.</p>
+                        <a href="#" class="btn btn-small">
+                            <i class="fas fa-ruler"></i> Xem bảng size
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card slide-right delay-2">
+                    <div class="resource-img">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Chính sách bảo mật">
+                    </div>
+                    <div class="resource-content">
+                        <h3>Chính Sách Bảo Mật & Quyền Riêng Tư</h3>
+                        <p>Tìm hiểu cách chúng tôi bảo vệ thông tin cá nhân của bạn và cam kết về quyền riêng tư.</p>
+                        <a href="#" class="btn btn-small">
+                            <i class="fas fa-shield-alt"></i> Xem chính sách
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RetroVibe</h3>
+                    <p>Thương hiệu thời trang secondhand cao cấp, mang đến những món đồ độc đáo với câu chuyện riêng và giá trị bền vững.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Sản phẩm</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> Về chúng tôi</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Liên hệ</a></li>
+                        <li><a href="support.html"><i class="fas fa-chevron-right"></i> Hỗ trợ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul class="footer-links">
+                        <li><a href="#faq"><i class="fas fa-chevron-right"></i> Câu hỏi thường gặp</a></li>
+                        <li><a href="#ai-chatbot"><i class="fas fa-chevron-right"></i> AI Tư vấn</a></li>
+                        <li><a href="#contact-options"><i class="fas fa-chevron-right"></i> Liên hệ hỗ trợ</a></li>
+                        <li><a href="#resources"><i class="fas fa-chevron-right"></i> Tài nguyên</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Trung tâm hỗ trợ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên hệ</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li><i class="fas fa-phone"></i> (028) 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> support@retrovibe.vn</li>
+                        <li><i class="fas fa-clock"></i> Hỗ trợ: 8:00 - 22:00 hàng ngày</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 RetroVibe. Tất cả các quyền được bảo lưu. | Thiết kế bởi RetroVibe Team</p>
+                </div>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fas fa-money-bill-wave" title="COD"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toastNotification">
+        <div class="toast-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="toast-content">
+            <h4>Thành công!</h4>
+            <p>Tin nhắn của bạn đã được gửi thành công.</p>
+        </div>
+        <button class="toast-close" id="toastClose">&times;</button>
+    </div>
+
+    <!-- Live Chat Modal -->
+    <div class="modal" id="liveChatModal">
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="modal-close" id="liveChatClose">&times;</button>
+            <div style="padding: 40px 30px;">
+                <div class="text-center">
+                    <div class="ai-avatar" style="margin-bottom: 20px;">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Live Chat Hỗ Trợ</h3>
+                    <p style="margin-bottom: 30px;">Kết nối với nhân viên hỗ trợ của chúng tôi</p>
+                    
+                    <div style="background-color: var(--light-gray); padding: 25px; border-radius: var(--radius); margin-bottom: 30px;">
+                        <p style="margin-bottom: 15px;"><i class="fas fa-clock"></i> Thời gian hoạt động: Thứ 2 - Thứ 6 (9:00 - 21:00)</p>
+                        <p style="margin-bottom: 0;"><i class="fas fa-user-check"></i> Đang có 5 nhân viên trực tuyến</p>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <button class="btn btn-accent" id="startChatNow">
+                            <i class="fas fa-comments"></i> Bắt đầu chat ngay
+                        </button>
+                        <button class="btn btn-outline" id="scheduleChat">
+                            <i class="fas fa-calendar-alt"></i> Đặt lịch chat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loading spinner
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            setTimeout(() => {
+                loadingSpinner.classList.remove('active');
+            }, 800);
+            
+            // Header scroll effect
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Mobile Navigation Toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-bars');
+                this.querySelector('i').classList.toggle('fa-times');
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.add('fa-bars');
+                    mobileToggle.querySelector('i').classList.remove('fa-times');
+                });
+            });
+            
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // FAQ Toggle
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    
+                    // Close other FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        if (item !== faqItem) {
+                            item.classList.remove('active');
+                            item.querySelector('.faq-answer').classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current FAQ item
+                    faqItem.classList.toggle('active');
+                    answer.classList.toggle('active');
+                });
+            });
+            
+            // Toast Notification
+            const toastNotification = document.getElementById('toastNotification');
+            const toastClose = document.getElementById('toastClose');
+            
+            function showToast(message = "Tin nhắn của bạn đã được gửi thành công!") {
+                toastNotification.querySelector('.toast-content p').textContent = message;
+                toastNotification.classList.add('show');
+                
+                setTimeout(() => {
+                    toastNotification.classList.remove('show');
+                }, 5000);
+            }
+            
+            toastClose.addEventListener('click', function() {
+                toastNotification.classList.remove('show');
+            });
+            
+            // AI Chatbot functionality
+            const chatMessages = document.getElementById('chatMessages');
+            const chatInput = document.getElementById('chatInput');
+            const sendMessageBtn = document.getElementById('sendMessage');
+            const quickQuestions = document.querySelectorAll('.quick-question');
+            
+            // AI responses database
+            const aiResponses = {
+                "Làm thế nào để đặt hàng?": "Để đặt hàng trên RetroVibe, bạn có thể làm theo các bước sau:\n1. Chọn sản phẩm bạn muốn mua\n2. Chọn kích cỡ và số lượng (nếu có)\n3. Nhấn 'Thêm vào giỏ hàng'\n4. Đi đến trang giỏ hàng và nhấn 'Thanh toán'\n5. Điền thông tin giao hàng và chọn phương thức thanh toán\n6. Xác nhận đơn hàng và thanh toán\n\nBạn sẽ nhận được email xác nhận đơn hàng ngay sau khi đặt hàng thành công.",
+                "Thời gian giao hàng là bao lâu?": "Thời gian giao hàng phụ thuộc vào địa chỉ giao hàng của bạn:\n\n• TP.HCM: 1-2 ngày làm việc\n• Các tỉnh thành khác: 3-5 ngày làm việc\n• Vùng sâu vùng xa: 5-7 ngày làm việc\n• Đơn hàng quốc tế: 7-14 ngày làm việc (tùy quốc gia)\n\nThời gian trên có thể thay đổi trong các dịp lễ, Tết hoặc do ảnh hưởng của thời tiết.",
+                "Chính sách đổi trả như thế nào?": "RetroVibe áp dụng chính sách đổi trả linh hoạt trong vòng 7 ngày kể từ ngày nhận hàng:\n\n• Điều kiện đổi trả: Sản phẩm còn nguyên tem mác, chưa qua sử dụng, không có mùi lạ, giữ nguyên tình trạng ban đầu\n• Sản phẩm không được đổi trả: Đồ lót, đồ bơi, phụ kiện đã sử dụng\n• Chi phí đổi trả: Khách hàng chịu phí vận chuyển đổi trả (trừ trường hợp sản phẩm lỗi)\n• Thời gian xử lý: 3-5 ngày làm việc sau khi nhận được sản phẩm đổi trả",
+                "Làm thế nào để theo dõi đơn hàng?": "Có 3 cách để theo dõi đơn hàng của bạn:\n\n1. Qua tài khoản RetroVibe: Đăng nhập vào tài khoản, vào mục 'Đơn hàng của tôi' để xem trạng thái đơn hàng\n2. Qua email: Chúng tôi sẽ gửi email cập nhật trạng thái đơn hàng cho bạn\n3. Qua tổng đài: Gọi đến hotline (028) 1234 5678 và cung cấp mã đơn hàng để được hỗ trợ\n\nMỗi đơn hàng đều có mã vận đơn riêng để tra cứu.",
+                "RetroVibe có những phương thức thanh toán nào?": "RetroVibe chấp nhận các phương thức thanh toán sau:\n\n• Thanh toán khi nhận hàng (COD)\n• Chuyển khoản ngân hàng\n• Thẻ tín dụng/ghi nợ (Visa, Mastercard, JCB)\n• Ví điện tử (Momo, ZaloPay, VNPay)\n• Internet Banking\n\nTất cả các phương thức thanh toán đều được bảo mật và an toàn.",
+                "Làm thế nào để sử dụng mã giảm giá?": "Để sử dụng mã giảm giá, bạn làm theo các bước sau:\n\n1. Thêm sản phẩm vào giỏ hàng\n2. Đi đến trang giỏ hàng\n3. Tìm ô 'Mã giảm giá' hoặc 'Mã khuyến mãi'\n4. Nhập mã và nhấn 'Áp dụng'\n5. Kiểm tra xem mã đã được áp dụng thành công chưa\n\nLưu ý: Mỗi mã giảm giá có điều kiện áp dụng riêng (ví dụ: đơn hàng tối thiểu, thời hạn sử dụng).",
+                "Làm thế nào để yêu cầu đổi trả/huỷ đơn hàng?": "Để yêu cầu đổi trả hoặc huỷ đơn hàng, bạn có thể:\n\n1. Qua website: Đăng nhập tài khoản, vào mục 'Đơn hàng của tôi', chọn đơn hàng cần đổi trả\n2. Qua email: Gửi email đến support@retrovibe.vn với tiêu đề '[Đổi trả] Mã đơn hàng'\n3. Qua tổng đài: Gọi hotline (028) 1234 5678 trong giờ hành chính\n4. Qua AI tư vấn: Sử dụng chatbot để được hướng dẫn tự động\n\nVui lòng chuẩn bị sẵn mã đơn hàng và lý do đổi trả.",
+                "mua sắm": "Chào bạn! Bạn đang quan tâm đến việc mua sắm tại RetroVibe phải không? Tôi có thể giúp bạn tìm kiếm sản phẩm, hướng dẫn đặt hàng hoặc giải đáp bất kỳ thắc mắc nào về quy trình mua sắm. Bạn có thể cho tôi biết bạn đang tìm kiếm sản phẩm nào không?",
+                "xin chào": "Xin chào! Tôi là RetroBot, trợ lý AI của RetroVibe. Tôi có thể giúp bạn về:\n\n• Hướng dẫn đặt hàng và thanh toán\n• Thông tin vận chuyển và giao hàng\n• Chính sách đổi trả và hoàn tiền\n• Câu hỏi về sản phẩm và kích cỡ\n• Hỗ trợ tài khoản và bảo mật\n\nBạn cần hỗ trợ về vấn đề gì?",
+                "cảm ơn": "Không có gì! Tôi rất vui khi được hỗ trợ bạn. Nếu bạn có thêm câu hỏi nào khác, đừng ngần ngại hỏi tôi nhé. Chúc bạn một ngày tốt lành! 😊",
+                "tạm biệt": "Tạm biệt bạn! Cảm ơn bạn đã sử dụng dịch vụ của RetroVibe. Nếu bạn cần hỗ trợ thêm, tôi luôn sẵn sàng giúp đỡ. Chúc bạn một ngày tuyệt vời! 👋"
+            };
+            
+            // Function to add message to chat
+            function addMessage(sender, text, isAI = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isAI ? 'ai' : 'user'}`;
+                
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+                
+                messageDiv.innerHTML = `
+                    <div class="message-content">${text.replace(/\n/g, '<br>')}</div>
+                    <div class="message-time">${timeString}</div>
+                `;
+                
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            // Function to get AI response
+            function getAIResponse(userMessage) {
+                const lowerMessage = userMessage.toLowerCase();
+                
+                // Check for exact matches
+                for (const [key, value] of Object.entries(aiResponses)) {
+                    if (lowerMessage.includes(key.toLowerCase())) {
+                        return value;
+                    }
+                }
+                
+                // Check for keyword matches
+                if (lowerMessage.includes('đặt hàng') || lowerMessage.includes('mua hàng') || lowerMessage.includes('order')) {
+                    return aiResponses["Làm thế nào để đặt hàng?"];
+                } else if (lowerMessage.includes('giao hàng') || lowerMessage.includes('vận chuyển') || lowerMessage.includes('ship')) {
+                    return aiResponses["Thời gian giao hàng là bao lâu?"];
+                } else if (lowerMessage.includes('đổi trả') || lowerMessage.includes('hoàn tiền') || lowerMessage.includes('trả hàng')) {
+                    return aiResponses["Chính sách đổi trả như thế nào?"];
+                } else if (lowerMessage.includes('theo dõi') || lowerMessage.includes('tra cứu') || lowerMessage.includes('đơn hàng')) {
+                    return aiResponses["Làm thế nào để theo dõi đơn hàng?"];
+                } else if (lowerMessage.includes('thanh toán') || lowerMessage.includes('payment') || lowerMessage.includes('tiền')) {
+                    return aiResponses["RetroVibe có những phương thức thanh toán nào?"];
+                } else if (lowerMessage.includes('mã giảm giá') || lowerMessage.includes('voucher') || lowerMessage.includes('khuyến mãi')) {
+                    return aiResponses["Làm thế nào để sử dụng mã giảm giá?"];
+                } else if (lowerMessage.includes('chào') || lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                    return aiResponses["xin chào"];
+                } else if (lowerMessage.includes('cảm ơn') || lowerMessage.includes('thanks')) {
+                    return aiResponses["cảm ơn"];
+                } else if (lowerMessage.includes('tạm biệt') || lowerMessage.includes('bye')) {
+                    return aiResponses["tạm biệt"];
+                } else {
+                    return "Xin lỗi, tôi chưa hiểu rõ câu hỏi của bạn. Bạn có thể hỏi về:\n• Cách đặt hàng\n• Thời gian giao hàng\n• Chính sách đổi trả\n• Phương thức thanh toán\n• Theo dõi đơn hàng\n• Hoặc bất kỳ vấn đề nào khác về RetroVibe.";
+                }
+            }
+            
+            // Send message function
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (message === '') return;
+                
+                // Add user message
+                addMessage('user', message);
+                
+                // Clear input
+                chatInput.value = '';
+                
+                // Show typing indicator
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'message ai';
+                typingDiv.innerHTML = `
+                    <div class="message-content" style="font-style: italic; color: var(--gray);">
+                        <i class="fas fa-ellipsis-h"></i> RetroBot đang soạn tin nhắn...
+                    </div>
+                `;
+                chatMessages.appendChild(typingDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                // Get AI response after delay
+                setTimeout(() => {
+                    // Remove typing indicator
+                    chatMessages.removeChild(typingDiv);
+                    
+                    // Add AI response
+                    const aiResponse = getAIResponse(message);
+                    addMessage('ai', aiResponse, true);
+                }, 1500);
+            }
+            
+            // Send message on button click
+            sendMessageBtn.addEventListener('click', sendMessage);
+            
+            // Send message on Enter key
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Quick questions click
+            quickQuestions.forEach(button => {
+                button.addEventListener('click', function() {
+                    const question = this.getAttribute('data-question');
+                    chatInput.value = question;
+                    sendMessage();
+                });
+            });
+            
+            // Live Chat Modal
+            const startLiveChatBtn = document.getElementById('startLiveChat');
+            const liveChatModal = document.getElementById('liveChatModal');
+            const liveChatClose = document.getElementById('liveChatClose');
+            const startChatNowBtn = document.getElementById('startChatNow');
+            const scheduleChatBtn = document.getElementById('scheduleChat');
+            
+            startLiveChatBtn.addEventListener('click', function() {
+                liveChatModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            liveChatClose.addEventListener('click', function() {
+                liveChatModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close modal when clicking outside
+            liveChatModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    liveChatModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            startChatNowBtn.addEventListener('click', function() {
+                showToast("Xin lỗi, hiện tại dịch vụ Live Chat đang bận. Vui lòng thử lại sau hoặc sử dụng AI tư vấn.");
+                liveChatModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            scheduleChatBtn.addEventListener('click', function() {
+                showToast("Tính năng đặt lịch chat sẽ sớm được cập nhật. Vui lòng sử dụng AI tư vấn hoặc gọi điện thoại để được hỗ trợ ngay.");
+                liveChatModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-box input');
+            const searchButton = document.querySelector('.search-box button');
+            
+            searchButton.addEventListener('click', function() {
+                performSearch();
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            function performSearch() {
+                const query = searchInput.value.trim();
+                if (query) {
+                    // In a real app, you would redirect to search results page
+                    showToast(`Đang tìm kiếm: "${query}"`);
+                    // For demo, we'll just log it
+                    console.log(`Searching for: ${query}`);
+                } else {
+                    showToast("Vui lòng nhập từ khóa tìm kiếm!");
+                }
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Update active state in support navigation
+                        document.querySelectorAll('.support-nav a').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 150,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Update active state in support navigation on scroll
+            const supportNavLinks = document.querySelectorAll('.support-nav a');
+            const sections = document.querySelectorAll('section[id]');
+            
+            function updateActiveNavLink() {
+                let currentSection = '';
+                const scrollPosition = window.scrollY + 200;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSection = sectionId;
+                    }
+                });
+                
+                supportNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const linkHref = link.getAttribute('href');
+                    if (linkHref === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNavLink);
+            
+            // Add ripple effect to buttons
+            document.querySelectorAll('.btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.7);
+                        transform: scale(0);
+                        animation: ripple-animation 0.6s linear;
+                        width: ${size}px;
+                        height: ${size}px;
+                        top: ${y}px;
+                        left: ${x}px;
+                    `;
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+            
+            // Add CSS for ripple animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes ripple-animation {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Parallax effect for hero section
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.support-hero');
+                if (hero) {
+                    hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+                }
+            });
+            
+            // Initialize animations for elements in viewport
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements with animation classes
+            document.querySelectorAll('.slide-up, .slide-left, .slide-right, .zoom-in').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Demo chat starter
+            setTimeout(() => {
+                addMessage('ai', "Bạn có thể hỏi tôi bất kỳ câu hỏi nào về RetroVibe, ví dụ như:\n• Làm thế nào để đặt hàng?\n• Thời gian giao hàng là bao lâu?\n• Chính sách đổi trả như thế nào?\n• Làm thế nào để theo dõi đơn hàng?", true);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

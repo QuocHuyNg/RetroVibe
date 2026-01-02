@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tác Động Tích Cực Của Thời Trang Secondhand Đến Môi Trường | RetroVibe Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Reset và biến toàn cục */
+        :root {
+            --primary: #8a6552;
+            --primary-dark: #6d4c3d;
+            --primary-light: #a37e6a;
+            --secondary: #e8d8c5;
+            --accent: #c7a17a;
+            --accent-light: #e1c8ad;
+            --dark: #2c2416;
+            --dark-light: #3d3524;
+            --light: #f9f5f0;
+            --light-gray: #f2eee9;
+            --gray: #8a8a8a;
+            --gray-light: #e0e0e0;
+            --success: #5cb85c;
+            --danger: #d9534f;
+            --warning: #f0ad4e;
+            --info: #5bc0de;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 15px 35px rgba(0, 0, 0, 0.15);
+            --radius: 10px;
+            --radius-lg: 15px;
+            --radius-xl: 20px;
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            --gradient-light: linear-gradient(135deg, var(--light) 0%, var(--secondary) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(199, 161, 122, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(232, 216, 197, 0.05) 0%, transparent 20%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-top: 2.5rem;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            color: var(--dark-light);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-light);
+            font-size: 1.05rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-light);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--gradient-accent);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline::before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-outline:hover {
+            color: white;
+            border-color: transparent;
+        }
+
+        .btn-accent {
+            background: var(--gradient-accent);
+        }
+
+        .btn-accent::before {
+            background: var(--gradient-primary);
+        }
+
+        .btn-small {
+            padding: 10px 22px;
+            font-size: 0.9rem;
+        }
+
+        .btn-large {
+            padding: 18px 42px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .bg-light {
+            background-color: var(--light);
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary);
+        }
+
+        .bg-gradient-light {
+            background: var(--gradient-light);
+        }
+
+        /* Floating elements for decoration */
+        .floating-element {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .floating-element.shape-1 {
+            top: 10%;
+            left: 5%;
+            width: 100px;
+            height: 100px;
+            background: var(--accent);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .floating-element.shape-2 {
+            bottom: 15%;
+            right: 7%;
+            width: 150px;
+            height: 150px;
+            background: var(--primary);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(5deg); }
+            66% { transform: translateY(20px) rotate(-5deg); }
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled .header-container {
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo i {
+            margin-right: 12px;
+            color: var(--accent);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .logo:hover i {
+            transform: rotate(-15deg);
+        }
+
+        .logo::after {
+            content: 'VINTAGE';
+            position: absolute;
+            top: -5px;
+            right: -45px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            background-color: var(--light);
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+            padding: 8px 0;
+            font-size: 1.05rem;
+            color: var(--dark);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::before,
+        .nav-links a.active::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f8f8f8;
+            border-radius: 50px;
+            padding: 10px 18px;
+            width: 240px;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .search-box:hover,
+        .search-box:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.2);
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            padding: 0 12px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            color: var(--primary);
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon, .user-icon, .wishlist-icon {
+            position: relative;
+            font-size: 1.4rem;
+            color: var(--dark);
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .cart-icon:hover, .user-icon:hover, .wishlist-icon:hover {
+            background-color: #f8f8f8;
+            color: var(--primary);
+        }
+
+        .cart-count, .wishlist-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--gradient-accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle:hover {
+            background-color: #f8f8f8;
+        }
+
+        /* Blog Single Hero */
+        .blog-single-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-single-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(199, 161, 122, 0.1) 0%, rgba(138, 101, 82, 0.05) 100%);
+            z-index: 0;
+        }
+
+        .blog-single-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .blog-single-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .blog-single-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.8rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #fff 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .blog-single-hero p {
+            font-size: 1.2rem;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .blog-meta i {
+            color: var(--accent);
+        }
+
+        .blog-badge {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Blog Single Content */
+        .blog-single-content {
+            padding: 80px 0;
+        }
+
+        .blog-single-container {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .blog-post-content {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            padding: 50px;
+        }
+
+        /* Article Content */
+        .article-intro {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--dark);
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+            margin: 2.5rem 0;
+            font-style: italic;
+        }
+
+        .article-image {
+            margin: 2.5rem 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition-slow);
+        }
+
+        .article-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .article-image figcaption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray);
+            padding: 10px;
+            font-style: italic;
+        }
+
+        .article-highlight {
+            background-color: var(--secondary);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin: 2.5rem 0;
+            border-left: 5px solid var(--primary);
+        }
+
+        .article-highlight h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .stat-box {
+            background: var(--gradient-light);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 2.5rem 0;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 3rem 0 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .article-tag {
+            background-color: var(--secondary);
+            color: var(--dark-light);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .article-tag:hover {
+            background-color: var(--accent-light);
+            color: var(--primary);
+        }
+
+        /* Author Box */
+        .author-box {
+            background-color: var(--light-gray);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin: 3rem 0;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: var(--shadow);
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .author-bio {
+            color: var(--dark-light);
+            margin-bottom: 1rem;
+        }
+
+        .author-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .author-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .author-social a:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Navigation Between Posts */
+        .post-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding-top: 3rem;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .nav-previous, .nav-next {
+            flex: 1;
+        }
+
+        .nav-next {
+            text-align: right;
+        }
+
+        .nav-previous a, .nav-next a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .nav-next a {
+            flex-direction: row-reverse;
+        }
+
+        .nav-previous a:hover, .nav-next a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .nav-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 5px;
+        }
+
+        .nav-title {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Comments Section */
+        .comments-section {
+            margin-top: 4rem;
+        }
+
+        .comments-section h3 {
+            margin-bottom: 2rem;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .comment {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .comment-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .comment-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .comment-content h5 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .comment-date {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comment-reply {
+            margin-top: 15px;
+        }
+
+        .comment-reply a {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .comment-reply a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Comment Form */
+        .comment-form {
+            margin-top: 3rem;
+            background-color: var(--light-gray);
+            border-radius: var(--radius);
+            padding: 30px;
+        }
+
+        .comment-form h4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.2);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Blog Sidebar */
+        .blog-sidebar {
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar-widget {
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            margin-bottom: 35px;
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-widget-title {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary);
+            color: var(--dark);
+        }
+
+        /* Search Widget */
+        .sidebar-search {
+            position: relative;
+        }
+
+        .sidebar-search input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .sidebar-search input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.2);
+        }
+
+        .sidebar-search button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sidebar-search button:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* Categories Widget */
+        .sidebar-categories li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar-categories a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: var(--light-gray);
+            border-radius: var(--radius);
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .sidebar-categories a:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding-left: 20px;
+        }
+
+        .sidebar-categories span {
+            background-color: var(--accent);
+            color: white;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 15px;
+        }
+
+        /* Recent Posts Widget */
+        .recent-post {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .recent-post:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .recent-post-img {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .recent-post-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .recent-post:hover .recent-post-img img {
+            transform: scale(1.1);
+        }
+
+        .recent-post-content h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .recent-post-content h4 a {
+            color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .recent-post-content h4 a:hover {
+            color: var(--primary);
+        }
+
+        .recent-post-content .post-date {
+            font-size: 0.85rem;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Tags Widget */
+        .sidebar-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .sidebar-tag {
+            background-color: var(--light-gray);
+            color: var(--dark-light);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .sidebar-tag:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Newsletter Widget */
+        .sidebar-newsletter p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .sidebar-newsletter input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
+            font-family: inherit;
+        }
+
+        .sidebar-newsletter input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .newsletter h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter h2::after {
+            background: var(--accent);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .newsletter p {
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            gap: 15px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 18px 25px;
+            border: none;
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 90px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-bottom: 15px;
+            color: white;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a i {
+            font-size: 0.9rem;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 8px;
+        }
+
+        .footer-links a:hover i {
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--accent);
+            margin-top: 5px;
+            font-size: 1.1rem;
+            min-width: 20px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+        }
+
+        .payment-methods i {
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .payment-methods i:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-5px);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 5000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .loading-spinner.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 70px;
+            height: 70px;
+            border: 5px solid var(--secondary);
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Share Buttons */
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+            margin: 2.5rem 0;
+        }
+
+        .share-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .share-btn.facebook {
+            background-color: #3b5998;
+        }
+
+        .share-btn.twitter {
+            background-color: #1da1f2;
+        }
+
+        .share-btn.pinterest {
+            background-color: #bd081c;
+        }
+
+        .share-btn.linkedin {
+            background-color: #0077b5;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .blog-single-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .blog-single-container {
+                grid-template-columns: 1fr 300px;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .section {
+                padding: 80px 0;
+            }
+            
+            .nav-links {
+                gap: 25px;
+            }
+            
+            .search-box {
+                width: 200px;
+            }
+            
+            .blog-single-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .blog-sidebar {
+                position: static;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .post-navigation {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: var(--shadow-xl);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+                gap: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 15px 0;
+                width: 100%;
+                border-bottom: 1px solid var(--gray-light);
+            }
+            
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-links a::before {
+                display: none;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .header-actions .search-box {
+                display: none;
+            }
+            
+            .blog-single-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .blog-single-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .blog-post-content {
+                padding: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2.8rem;
+            }
+            
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .blog-single-hero {
+                padding: 100px 0 60px;
+            }
+            
+            .blog-single-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-meta {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                padding: 12px 28px;
+            }
+            
+            .btn-large {
+                padding: 16px 36px;
+            }
+            
+            .comment {
+                flex-direction: column;
+            }
+            
+            .comment-avatar {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .slide-left {
+            animation: slideLeft 0.8s ease forwards;
+        }
+
+        @keyframes slideLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .slide-right {
+            animation: slideRight 0.8s ease forwards;
+        }
+
+        @keyframes slideRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Đang tải trang...</p>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i> RetroVibe
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog-single.html" class="active">Bài viết</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm bài viết...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-icons">
+                    <div class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                        <span class="wishlist-count">5</span>
+                    </div>
+                    
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Single Hero -->
+    <section class="blog-single-hero">
+        <div class="floating-element shape-1"></div>
+        <div class="floating-element shape-2"></div>
+        
+        <div class="container">
+            <div class="blog-single-hero-content fade-in">
+                <span class="blog-badge">Bền vững</span>
+                <h1 class="animate__animated animate__fadeInDown">Tác Động Tích Cực Của Thời Trang Secondhand Đến Môi Trường</h1>
+                <p class="animate__animated animate__fadeIn animate__delay-1s">Khám phá những con số ấn tượng về cách thời trang secondhand giúp giảm thiểu chất thải dệt may, tiết kiệm nước và giảm lượng khí thải carbon, góp phần bảo vệ hành tinh của chúng ta.</p>
+                
+                <div class="blog-meta animate__animated animate__fadeIn animate__delay-2s">
+                    <span><i class="far fa-calendar"></i> 10 Tháng 10, 2023</span>
+                    <span><i class="far fa-clock"></i> 6 phút đọc</span>
+                    <span><i class="far fa-user"></i> Trung Kiên</span>
+                    <span><i class="far fa-comment"></i> 12 bình luận</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Single Content -->
+    <section class="blog-single-content">
+        <div class="container">
+            <div class="blog-single-container">
+                <!-- Main Blog Content -->
+                <div class="blog-post-content slide-up">
+                    <!-- Article Content -->
+                    <article class="article-content">
+                        <p>Trong thời đại mà biến đổi khí hậu và ô nhiễm môi trường đang trở thành những vấn đề cấp bách toàn cầu, mỗi hành động nhỏ của chúng ta đều có thể tạo ra sự khác biệt lớn. Một trong những cách đơn giản nhưng hiệu quả nhất mà mỗi người có thể thực hiện là thay đổi thói quen mua sắm thời trang của mình. Lựa chọn thời trang secondhand không chỉ là một phong cách sống, mà còn là một hành động thiết thực để bảo vệ môi trường.</p>
+                        
+                        <div class="article-intro">
+                            Mỗi lần bạn chọn mua một món đồ secondhand, bạn đang góp phần giảm thiểu chất thải dệt may, tiết kiệm nước và giảm lượng khí thải carbon. Hãy cùng khám phá những con số ấn tượng về tác động tích cực của thời trang secondhand đến hành tinh của chúng ta.
+                        </div>
+                        
+                        <h2>Vấn đề môi trường từ ngành công nghiệp thời trang</h2>
+                        
+                        <p>Ngành công nghiệp thời trang là một trong những ngành gây ô nhiễm nhất thế giới. Theo báo cáo của Liên Hợp Quốc, ngành thời trang chịu trách nhiệm cho:</p>
+                        
+                        <ul>
+                            <li>10% lượng khí thải carbon toàn cầu - nhiều hơn cả các chuyến bay quốc tế và vận tải biển cộng lại</li>
+                            <li>20% lượng nước thải công nghiệp toàn cầu</li>
+                            <li>Gần 85% tất cả hàng dệt may cuối cùng bị chôn lấp hoặc đốt mỗi năm</li>
+                            <li>Sử dụng khoảng 93 tỷ mét khối nước mỗi năm - đủ để đáp ứng nhu cầu của 5 triệu người</li>
+                        </ul>
+                        
+                        <figure class="article-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1558&q=80" alt="Chất thải từ ngành công nghiệp thời trang">
+                            <figcaption>Chất thải dệt may là một trong những vấn đề môi trường nghiêm trọng nhất hiện nay</figcaption>
+                        </figure>
+                        
+                        <h2>Tác động tích cực của thời trang secondhand</h2>
+                        
+                        <p>Khi bạn mua một món đồ secondhand, bạn đang kéo dài vòng đời của sản phẩm đó và giảm thiểu nhu cầu sản xuất hàng mới. Điều này mang lại nhiều lợi ích môi trường đáng kể:</p>
+                        
+                        <div class="stat-grid">
+                            <div class="stat-box">
+                                <div class="stat-number">92%</div>
+                                <div class="stat-label">Giảm chất thải dệt may</div>
+                                <p style="font-size: 0.9rem; margin-top: 10px;">Mỗi kg quần áo secondhand được tái sử dụng giúp giảm 3.6 kg CO2 và tiết kiệm 6000 lít nước</p>
+                            </div>
+                            
+                            <div class="stat-box">
+                                <div class="stat-number">79%</div>
+                                <div class="stat-label">Giảm khí thải carbon</div>
+                                <p style="font-size: 0.9rem; margin-top: 10px;">So với sản xuất quần áo mới, secondhand giảm đáng kể lượng khí thải nhà kính</p>
+                            </div>
+                            
+                            <div class="stat-box">
+                                <div class="stat-number">85%</div>
+                                <div class="stat-label">Tiết kiệm nước</div>
+                                <p style="font-size: 0.9rem; margin-top: 10px;">Sản xuất một chiếc áo cotton mới cần ~2700 lít nước, tương đương lượng nước uống của một người trong 2.5 năm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="article-highlight">
+                            <h4>Sự thật đáng kinh ngạc</h4>
+                            <p>Theo nghiên cứu từ ThredUp, nếu mỗi người mua một món đồ secondhand thay vì đồ mới trong một năm, chúng ta có thể tiết kiệm được:</p>
+                            <ul>
+                                <li>6 tỷ pound chất thải dệt may khỏi bãi rác</li>
+                                <li>23 tỷ gallon nước (đủ để lấp đầy 34.000 bể bơi Olympic)</li>
+                                <li>Giảm lượng khí thải carbon tương đương với việc loại bỏ nửa triệu xe ô tô khỏi đường trong một năm</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Kinh tế tuần hoàn trong thời trang</h3>
+                        
+                        <p>Thời trang secondhand là một phần quan trọng của mô hình kinh tế tuần hoàn, thay thế cho mô hình "sản xuất - sử dụng - vứt bỏ" truyền thống. Trong mô hình tuần hoàn, quần áo được:</p>
+                        
+                        <ol>
+                            <li><strong>Tái sử dụng:</strong> Quần áo được mua bán lại nhiều lần</li>
+                            <li><strong>Sửa chữa và tân trang:</strong> Kéo dài tuổi thọ sản phẩm</li>
+                            <li><strong>Tái chế:</strong> Biến quần áo cũ thành nguyên liệu mới</li>
+                            <li><strong>Phân hủy sinh học:</strong> Đối với chất liệu tự nhiên, có thể phân hủy hoàn toàn</li>
+                        </ol>
+                        
+                        <figure class="article-image">
+                            <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Thời trang secondhand bền vững">
+                            <figcaption>Thời trang secondhand góp phần tạo nên một nền kinh tế tuần hoàn bền vững</figcaption>
+                        </figure>
+                        
+                        <h3>Lợi ích xã hội và kinh tế</h3>
+                        
+                        <p>Ngoài những lợi ích về môi trường, thời trang secondhand còn mang lại nhiều giá trị xã hội và kinh tế:</p>
+                        
+                        <ul>
+                            <li><strong>Tiết kiệm chi phí:</strong> Người tiêu dùng có thể mua được quần áo chất lượng với giá thấp hơn 50-80% so với giá gốc</li>
+                            <li><strong>Tạo việc làm:</strong> Ngành công nghiệp secondhand tạo ra hàng nghìn việc làm tại các cửa hàng từ thiện, cửa hàng vintage và nền tảng trực tuyến</li>
+                            <li><strong>Hỗ trợ cộng đồng:</strong> Nhiều cửa hàng secondhand hoạt động với mục đích từ thiện, sử dụng lợi nhuận để hỗ trợ các chương trình xã hội</li>
+                            <li><strong>Bảo tồn văn hóa:</strong> Giữ gìn và tôn vinh những thiết kế, phong cách từ các thời kỳ khác nhau</li>
+                        </ul>
+                        
+                        <h2>Hành động của bạn tạo nên sự khác biệt</h2>
+                        
+                        <p>Mỗi quyết định mua sắm của bạn đều có sức mạnh tạo ra sự thay đổi. Dưới đây là một số cách bạn có thể đóng góp:</p>
+                        
+                        <div class="article-highlight">
+                            <h4>Lời khuyên hành động</h4>
+                            <ul>
+                                <li><strong>Ưu tiên mua secondhand:</strong> Trước khi mua đồ mới, hãy tìm kiếm phiên bản secondhand</li>
+                                <li><strong>Bán hoặc quyên góp quần áo cũ:</strong> Đừng vứt quần áo còn dùng được vào thùng rác</li>
+                                <li><strong>Chọn chất liệu bền vững:</strong> Khi mua đồ mới, ưu tiên chất liệu tự nhiên, hữu cơ</li>
+                                <li><strong>Chăm sóc quần áo đúng cách:</strong> Giặt ít hơn, sửa chữa thay vì vứt bỏ</li>
+                                <li><strong>Lan tỏa nhận thức:</strong> Chia sẻ kiến thức về thời trang bền vững với bạn bè và gia đình</li>
+                            </ul>
+                        </div>
+                        
+                        <p>Theo ước tính, nếu tuổi thọ trung bình của quần áo được kéo dài thêm chỉ 9 tháng, lượng khí thải carbon, chất thải và nước có thể giảm 20-30%. Điều này cho thấy sức mạnh to lớn của việc kéo dài vòng đời sản phẩm thông qua thời trang secondhand.</p>
+                        
+                        <!-- Share Buttons -->
+                        <div class="share-buttons">
+                            <p style="margin-right: 15px; font-weight: 600; color: var(--dark);">Chia sẻ bài viết:</p>
+                            <a href="#" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="share-btn pinterest"><i class="fab fa-pinterest"></i></a>
+                            <a href="#" class="share-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        
+                        <!-- Article Tags -->
+                        <div class="article-tags">
+                            <a href="#" class="article-tag">Bền vững</a>
+                            <a href="#" class="article-tag">Môi trường</a>
+                            <a href="#" class="article-tag">Secondhand</a>
+                            <a href="#" class="article-tag">Thời trang xanh</a>
+                            <a href="#" class="article-tag">Kinh tế tuần hoàn</a>
+                            <a href="#" class="article-tag">Giảm thiểu chất thải</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Author Box -->
+                    <div class="author-box slide-up delay-1">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Tác giả Trung Kiên">
+                        </div>
+                        <div class="author-info">
+                            <h4>Trung Kiên</h4>
+                            <p class="author-bio">Chuyên gia về thời trang bền vững với hơn 10 năm kinh nghiệm trong ngành. Anh là người sáng lập RetroVibe và luôn đam mê tìm kiếm giải pháp cho các vấn đề môi trường thông qua thời trang secondhand.</p>
+                            <div class="author-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Between Posts -->
+                    <div class="post-navigation">
+                        <div class="nav-previous">
+                            <a href="blog-single.html">
+                                <i class="fas fa-chevron-left"></i>
+                                <div>
+                                    <div class="nav-label">Bài viết trước</div>
+                                    <div class="nav-title">Hướng Dẫn Phối Đồ Vintage: Từ Cơ Bản Đến Nâng Cao</div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="nav-next">
+                            <a href="blog-single.html">
+                                <i class="fas fa-chevron-right"></i>
+                                <div>
+                                    <div class="nav-label">Bài viết tiếp theo</div>
+                                    <div class="nav-title">Lịch Sử Áo Khoác Denim: Từ Đồng Phục Lao Động Đến Biểu Tượng Thời Trang</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Comments Section -->
+                    <div class="comments-section">
+                        <h3>12 Bình luận</h3>
+                        
+                        <div class="comment">
+                            <div class="comment-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Người dùng">
+                            </div>
+                            <div class="comment-content">
+                                <h5>Minh Anh</h5>
+                                <div class="comment-date"><i class="far fa-clock"></i> 12 Tháng 10, 2023</div>
+                                <p>Bài viết rất ý nghĩa! Mình đã chuyển sang mua đồ secondhand được 2 năm và cảm thấy không chỉ tiết kiệm được rất nhiều tiền mà còn có cảm giác mình đang góp phần bảo vệ môi trường. Cảm ơn tác giả đã chia sẻ những con số thống kê rất thuyết phục!</p>
+                                <div class="comment-reply">
+                                    <a href="#"><i class="fas fa-reply"></i> Trả lời</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comment">
+                            <div class="comment-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Người dùng">
+                            </div>
+                            <div class="comment-content">
+                                <h5>Tuấn Đạt</h5>
+                                <div class="comment-date"><i class="far fa-clock"></i> 11 Tháng 10, 2023</div>
+                                <p>Tôi không ngờ thời trang secondhand lại có tác động lớn đến vậy. Bài viết đã thay đổi hoàn toàn góc nhìn của tôi về việc mua sắm. Sẽ ưu tiên mua đồ secondhand từ bây giờ!</p>
+                                <div class="comment-reply">
+                                    <a href="#"><i class="fas fa-reply"></i> Trả lời</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comment">
+                            <div class="comment-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Người dùng">
+                            </div>
+                            <div class="comment-content">
+                                <h5>Thanh Hà</h5>
+                                <div class="comment-date"><i class="far fa-clock"></i> 10 Tháng 10, 2023</div>
+                                <p>Con số 2700 lít nước để sản xuất một chiếc áo cotton thật sự làm tôi bất ngờ. Bài viết đã cung cấp rất nhiều thông tin giá trị mà trước đây tôi không hề biết. Cảm ơn RetroVibe!</p>
+                                <div class="comment-reply">
+                                    <a href="#"><i class="fas fa-reply"></i> Trả lời</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Comment Form -->
+                        <div class="comment-form">
+                            <h4>Để lại bình luận</h4>
+                            <form id="commentForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Họ và tên *</label>
+                                        <input type="text" id="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input type="email" id="email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="comment">Bình luận *</label>
+                                    <textarea id="comment" rows="6" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-accent">Gửi bình luận</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget sidebar-search slide-right">
+                        <h3 class="sidebar-widget-title">Tìm kiếm</h3>
+                        <div class="sidebar-search-container">
+                            <input type="text" placeholder="Từ khóa...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget slide-right delay-1">
+                        <h3 class="sidebar-widget-title">Danh mục</h3>
+                        <ul class="sidebar-categories">
+                            <li>
+                                <a href="#">
+                                    Phối đồ & Styling
+                                    <span>12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Thời trang bền vững
+                                    <span>8</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Lịch sử thời trang
+                                    <span>6</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Mẹo mua sắm
+                                    <span>15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Xu hướng
+                                    <span>10</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Chăm sóc & Bảo quản
+                                    <span>7</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Câu chuyện khách hàng
+                                    <span>5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget slide-right delay-2">
+                        <h3 class="sidebar-widget-title">Bài viết gần đây</h3>
+                        <div class="sidebar-recent-posts">
+                            <div class="recent-post">
+                                <div class="recent-post-img">
+                                    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" alt="Set đồ vintage">
+                                </div>
+                                <div class="recent-post-content">
+                                    <h4><a href="blog-single.html">Cách Phối Set Đồ Vintage Cho Người Mới Bắt Đầu</a></h4>
+                                    <div class="post-date"><i class="far fa-calendar"></i> 18/10/2023</div>
+                                </div>
+                            </div>
+                            
+                            <div class="recent-post">
+                                <div class="recent-post-img">
+                                    <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Áo khoác da">
+                                </div>
+                                <div class="recent-post-content">
+                                    <h4><a href="blog-single.html">Đánh Giá Chất Lượng Áo Khoác Da Vintage: Những Điều Cần Biết</a></h4>
+                                    <div class="post-date"><i class="far fa-calendar"></i> 12/10/2023</div>
+                                </div>
+                            </div>
+                            
+                            <div class="recent-post">
+                                <div class="recent-post-img">
+                                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80" alt="Váy dạ hội vintage">
+                                </div>
+                                <div class="recent-post-content">
+                                    <h4><a href="blog-single.html">Váy Dạ Hội Vintage: Lựa Chọn Hoàn Hảo Cho Các Dịp Đặc Biệt</a></h4>
+                                    <div class="post-date"><i class="far fa-calendar"></i> 05/10/2023</div>
+                                </div>
+                            </div>
+                            
+                            <div class="recent-post">
+                                <div class="recent-post-img">
+                                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Xu hướng màu sắc">
+                                </div>
+                                <div class="recent-post-content">
+                                    <h4><a href="blog-single.html">Xu Hướng Màu Sắc Vintage Cho Mùa Thu 2023</a></h4>
+                                    <div class="post-date"><i class="far fa-calendar"></i> 28/09/2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget slide-right delay-3">
+                        <h3 class="sidebar-widget-title">Tags phổ biến</h3>
+                        <div class="sidebar-tags">
+                            <a href="#" class="sidebar-tag">Vintage</a>
+                            <a href="#" class="sidebar-tag">Secondhand</a>
+                            <a href="#" class="sidebar-tag">Phối đồ</a>
+                            <a href="#" class="sidebar-tag">Bền vững</a>
+                            <a href="#" class="sidebar-tag">Denim</a>
+                            <a href="#" class="sidebar-tag">Thập niên 90</a>
+                            <a href="#" class="sidebar-tag">Mẹo hay</a>
+                            <a href="#" class="sidebar-tag">Áo khoác</a>
+                            <a href="#" class="sidebar-tag">Đầm vintage</a>
+                            <a href="#" class="sidebar-tag">Xu hướng</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget sidebar-newsletter slide-right delay-4">
+                        <h3 class="sidebar-widget-title">Đăng ký nhận tin</h3>
+                        <p>Nhận thông báo khi có bài viết mới, cùng nhiều nội dung độc quyền khác.</p>
+                        <input type="email" placeholder="Email của bạn">
+                        <button class="btn btn-accent" style="width: 100%;">Đăng ký</button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Tham gia cộng đồng RetroVibe</h2>
+                <p>Đăng ký để nhận những bài viết mới nhất về thời trang secondhand, mẹo phối đồ và những câu chuyện thú vị từ cộng đồng yêu vintage.</p>
+            </div>
+            
+            <form class="newsletter-form slide-up" id="blogNewsletterForm">
+                <input type="email" placeholder="Nhập địa chỉ email của bạn" required>
+                <button type="submit" class="btn btn-accent btn-large">
+                    <i class="fas fa-paper-plane"></i> Đăng ký ngay
+                </button>
+            </form>
+            
+            <p class="text-center" style="margin-top: 20px; opacity: 0.8; font-size: 0.9rem;">Chúng tôi tôn trọng quyền riêng tư của bạn. Bạn có thể hủy đăng ký bất cứ lúc nào.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RetroVibe</h3>
+                    <p>Thương hiệu thời trang secondhand cao cấp, mang đến những món đồ độc đáo với câu chuyện riêng và giá trị bền vững.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Trang chủ</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Sản phẩm</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> Về chúng tôi</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Liên hệ</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Danh mục blog</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Phối đồ & Styling</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Thời trang bền vững</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Lịch sử thời trang</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Mẹo mua sắm</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Xu hướng</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên hệ</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li><i class="fas fa-phone"></i> (028) 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@retrovibe.vn</li>
+                        <li><i class="fas fa-clock"></i> Mở cửa: 9:00 - 21:00 hàng ngày</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 RetroVibe. Tất cả các quyền được bảo lưu. | Thiết kế bởi RetroVibe Team</p>
+                </div>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-paypal" title="PayPal"></i>
+                    <i class="fas fa-money-bill-wave" title="COD"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loading spinner
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            setTimeout(() => {
+                loadingSpinner.classList.remove('active');
+            }, 800);
+            
+            // Header scroll effect
+            const header = document.getElementById('mainHeader');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Mobile Navigation Toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-bars');
+                this.querySelector('i').classList.toggle('fa-times');
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.add('fa-bars');
+                    mobileToggle.querySelector('i').classList.remove('fa-times');
+                });
+            });
+            
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Blog Search Functionality
+            const searchInput = document.querySelector('.sidebar-search input');
+            const searchButton = document.querySelector('.sidebar-search button');
+            
+            searchButton.addEventListener('click', function() {
+                performBlogSearch();
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performBlogSearch();
+                }
+            });
+            
+            function performBlogSearch() {
+                const query = searchInput.value.trim();
+                if (query) {
+                    showToast(`Đang tìm kiếm bài viết với từ khóa: "${query}"`);
+                    console.log(`Searching blog posts for: ${query}`);
+                } else {
+                    showToast("Vui lòng nhập từ khóa tìm kiếm!");
+                }
+            }
+            
+            // Newsletter Form Submission
+            const newsletterForm = document.getElementById('blogNewsletterForm');
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                // Show loading state
+                const submitBtn = this.querySelector('button');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang đăng ký...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    showToast(`Cảm ơn bạn đã đăng ký nhận bản tin blog với email: ${email}`);
+                    this.reset();
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+            
+            // Sidebar Newsletter Subscription
+            const sidebarNewsletterBtn = document.querySelector('.sidebar-newsletter .btn');
+            const sidebarNewsletterInput = document.querySelector('.sidebar-newsletter input');
+            
+            sidebarNewsletterBtn.addEventListener('click', function() {
+                const email = sidebarNewsletterInput.value.trim();
+                if (email) {
+                    // Show loading state
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang đăng ký...';
+                    this.disabled = true;
+                    
+                    // Simulate API call
+                    setTimeout(() => {
+                        showToast(`Đã đăng ký nhận tin blog với email: ${email}`);
+                        sidebarNewsletterInput.value = '';
+                        
+                        // Reset button
+                        this.innerHTML = originalText;
+                        this.disabled = false;
+                    }, 1500);
+                } else {
+                    showToast("Vui lòng nhập địa chỉ email!");
+                }
+            });
+            
+            // Comment Form Submission
+            const commentForm = document.getElementById('commentForm');
+            commentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = this.querySelector('#name').value;
+                const comment = this.querySelector('#comment').value;
+                
+                // Show loading state
+                const submitBtn = this.querySelector('button');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang gửi...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    showToast(`Cảm ơn bạn, ${name}! Bình luận của bạn đã được gửi thành công và đang chờ duyệt.`);
+                    this.reset();
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+            
+            // Share Buttons Functionality
+            const shareButtons = document.querySelectorAll('.share-btn');
+            shareButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const platform = this.querySelector('i').className.split(' ')[1];
+                    let platformName = '';
+                    
+                    switch(platform) {
+                        case 'fa-facebook-f':
+                            platformName = 'Facebook';
+                            break;
+                        case 'fa-twitter':
+                            platformName = 'Twitter';
+                            break;
+                        case 'fa-pinterest':
+                            platformName = 'Pinterest';
+                            break;
+                        case 'fa-linkedin-in':
+                            platformName = 'LinkedIn';
+                            break;
+                    }
+                    
+                    showToast(`Chia sẻ bài viết lên ${platformName} thành công!`);
+                });
+            });
+            
+            // Category Filtering
+            const categoryLinks = document.querySelectorAll('.sidebar-categories a');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const category = this.textContent.split(' ')[0];
+                    
+                    // Highlight selected category
+                    categoryLinks.forEach(l => l.style.backgroundColor = '');
+                    this.style.backgroundColor = 'var(--secondary)';
+                    
+                    showToast(`Đang lọc bài viết theo danh mục: ${category}`);
+                });
+            });
+            
+            // Tag Filtering
+            const tagButtons = document.querySelectorAll('.sidebar-tag, .article-tag');
+            tagButtons.forEach(tag => {
+                tag.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tagName = this.textContent;
+                    
+                    showToast(`Đang lọc bài viết theo tag: ${tagName}`);
+                });
+            });
+            
+            // Toast Notification Functionality
+            function showToast(message) {
+                // Create toast element
+                const toast = document.createElement('div');
+                toast.className = 'toast-notification';
+                toast.innerHTML = `
+                    <div class="toast-content">
+                        <p>${message}</p>
+                    </div>
+                    <button class="toast-close">&times;</button>
+                `;
+                
+                // Style the toast
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    background: var(--gradient-primary);
+                    color: white;
+                    padding: 18px 25px;
+                    border-radius: var(--radius);
+                    box-shadow: var(--shadow-xl);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 15px;
+                    transform: translateX(150%);
+                    transition: transform 0.5s ease;
+                    z-index: 3000;
+                    max-width: 350px;
+                    animation: slideIn 0.5s ease forwards;
+                `;
+                
+                // Add close button functionality
+                const closeBtn = toast.querySelector('.toast-close');
+                closeBtn.style.cssText = `
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    margin-left: 10px;
+                `;
+                
+                closeBtn.addEventListener('click', () => {
+                    toast.style.animation = 'slideOut 0.5s ease forwards';
+                    setTimeout(() => {
+                        if (toast.parentNode) {
+                            toast.parentNode.removeChild(toast);
+                        }
+                    }, 500);
+                });
+                
+                // Add animation keyframes
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes slideIn {
+                        from { transform: translateX(150%); }
+                        to { transform: translateX(0); }
+                    }
+                    @keyframes slideOut {
+                        from { transform: translateX(0); }
+                        to { transform: translateX(150%); }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                // Add to DOM
+                document.body.appendChild(toast);
+                
+                // Auto remove after 4 seconds
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.style.animation = 'slideOut 0.5s ease forwards';
+                        setTimeout(() => {
+                            if (toast.parentNode) {
+                                toast.parentNode.removeChild(toast);
+                            }
+                        }, 500);
+                    }
+                }, 4000);
+            }
+            
+            // Parallax effect for hero section
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.blog-single-hero');
+                if (hero) {
+                    hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+                }
+            });
+            
+            // Initialize floating elements
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach(element => {
+                // Randomize animation delay
+                element.style.animationDelay = `${Math.random() * 5}s`;
+            });
+            
+            // Read time calculation based on content length
+            const articleContent = document.querySelector('.article-content');
+            if (articleContent) {
+                const text = articleContent.textContent;
+                const wordCount = text.split(/\s+/).length;
+                const readingTime = Math.ceil(wordCount / 200); // Average reading speed: 200 words per minute
+                
+                // Update reading time in the meta info
+                const readingTimeElement = document.querySelector('.blog-meta span:nth-child(2)');
+                if (readingTimeElement && readingTime > 0) {
+                    readingTimeElement.innerHTML = `<i class="far fa-clock"></i> ${readingTime} phút đọc`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
